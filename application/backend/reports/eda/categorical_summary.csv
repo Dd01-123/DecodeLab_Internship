@@ -1,0 +1,12 @@
+Column,Total_Records,Unique_Categories,Diversity_Index,Rare_Categories_Count,Top_Category,Top_Category_Count,Top_Category_Pct
+OrderID,1200,1200,0.9992,1200,ORD201199,1,0.08
+CustomerID,1200,1189,0.9992,1189,C46651,2,0.17
+Product,1200,7,0.8568,0,Printer,181,15.08
+ShippingAddress,1200,655,0.998,655,533 Main St,8,0.67
+PaymentMethod,1200,5,0.7996,0,Online,258,21.5
+OrderStatus,1200,5,0.7998,0,Cancelled,250,20.83
+TrackingNumber,1200,1200,0.9992,1200,TRK51116746,1,0.08
+CouponCode,891,3,0.6662,0,FREESHIP,313,35.13
+ReferralSource,1200,5,0.7994,0,Instagram,259,21.58
+Quantity,1200,5,0.7994,0,1,255,21.25
+ItemsInCart,1200,10,0.8815,0,5,191,15.92

@@ -1,0 +1,81 @@
+================================================================================
+                         DATASET PROFILE REPORT
+                    Exploratory Data Analysis Framework
+================================================================================
+Generated: 2026-06-11 23:58:27
+
+--------------------------------------------------------------------------------
+1. DATASET STRUCTURE
+--------------------------------------------------------------------------------
+  Total Rows:       1,200
+  Total Columns:    14
+  Shape:            (1200, 14)
+  Memory Usage:     0.6272 MB (657,637 bytes)
+
+--------------------------------------------------------------------------------
+2. DATA TYPES
+--------------------------------------------------------------------------------
+  Column                    Pandas Dtype         Category    
+  ---------------------------------------------------------
+  OrderID                   object               text        
+  Date                      datetime64[ns]       datetime    
+  CustomerID                object               text        
+  Product                   object               text        
+  Quantity                  int64                numeric     
+  UnitPrice                 float64              numeric     
+  ShippingAddress           object               text        
+  PaymentMethod             object               text        
+  OrderStatus               object               text        
+  TrackingNumber            object               text        
+  ItemsInCart               int64                numeric     
+  CouponCode                object               other       
+  ReferralSource            object               text        
+  TotalPrice                float64              numeric     
+
+--------------------------------------------------------------------------------
+3. MISSING VALUES ANALYSIS
+--------------------------------------------------------------------------------
+  Total Missing Cells:    309
+  Total Cells:            16,800
+  Overall Missing %:      1.84%
+
+  Column                       Missing        %   Complete
+  -------------------------------------------------------
+  OrderID                            0    0.00%    100.00% OK
+  Date                               0    0.00%    100.00% OK
+  CustomerID                         0    0.00%    100.00% OK
+  Product                            0    0.00%    100.00% OK
+  Quantity                           0    0.00%    100.00% OK
+  UnitPrice                          0    0.00%    100.00% OK
+  ShippingAddress                    0    0.00%    100.00% OK
+  PaymentMethod                      0    0.00%    100.00% OK
+  OrderStatus                        0    0.00%    100.00% OK
+  TrackingNumber                     0    0.00%    100.00% OK
+  ItemsInCart                        0    0.00%    100.00% OK
+  CouponCode                       309   25.75%     74.25% ISSUE
+  ReferralSource                     0    0.00%    100.00% OK
+  TotalPrice                         0    0.00%    100.00% OK
+
+--------------------------------------------------------------------------------
+4. CARDINALITY ANALYSIS
+--------------------------------------------------------------------------------
+  Column                        Unique      Ratio                 Type
+  -----------------------------------------------------------------
+  OrderID                        1,200     1.0000          UNIQUE (ID)
+  Date                             671     0.5592               NORMAL
+  CustomerID                     1,189     0.9908     HIGH CARDINALITY
+  Product                            7     0.0058      LOW CARDINALITY
+  Quantity                           5     0.0042      LOW CARDINALITY
+  UnitPrice                      1,193     0.9942     HIGH CARDINALITY
+  ShippingAddress                  655     0.5458               NORMAL
+  PaymentMethod                      5     0.0042      LOW CARDINALITY
+  OrderStatus                        5     0.0042      LOW CARDINALITY
+  TrackingNumber                 1,200     1.0000          UNIQUE (ID)
+  ItemsInCart                       10     0.0083      LOW CARDINALITY
+  CouponCode                         4     0.0033      LOW CARDINALITY
+  ReferralSource                     5     0.0042      LOW CARDINALITY
+  TotalPrice                     1,195     0.9958     HIGH CARDINALITY
+
+================================================================================
+END OF DATASET PROFILE REPORT
+================================================================================

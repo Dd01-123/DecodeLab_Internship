@@ -1,0 +1,66 @@
+================================================================================
+                         BUSINESS INSIGHTS REPORT
+                    Exploratory Data Analysis Framework
+================================================================================
+Generated: 2026-06-11 23:58:42
+
+--------------------------------------------------------------------------------
+1. REVENUE INSIGHTS
+--------------------------------------------------------------------------------
+  Total Revenue:               $1,264,761.96
+  Average Order Value:         $1,053.97
+  Median Order Value:          $823.62
+  Highest Revenue Product:     Chair ($195,620.11)
+  Lowest Revenue Product:      Phone ($151,722.39)
+
+  Top 5 Products by Revenue:
+    1. Chair                $  195,620.11
+    2. Printer              $  195,612.61
+    3. Laptop               $  192,126.56
+    4. Tablet               $  186,568.95
+    5. Monitor              $  175,651.41
+
+--------------------------------------------------------------------------------
+2. CUSTOMER INSIGHTS
+--------------------------------------------------------------------------------
+  Total Unique Customers:      1,189
+  Most Active Customer:        C21191 (2 orders)
+  Avg Orders per Customer:     1.01
+  Highest Value Customer:      C38840 ($5,723.23)
+  Avg Customer Lifetime Value: $1,063.72
+
+--------------------------------------------------------------------------------
+3. ORDER INSIGHTS
+--------------------------------------------------------------------------------
+  Order Status Distribution:
+    Cancelled               250 ( 20.83%)
+    Returned                247 ( 20.58%)
+    Pending                 237 ( 19.75%)
+    Shipped                 235 ( 19.58%)
+    Delivered               231 ( 19.25%)
+  Fulfillment Rate:            38.83%
+  Cancellation Rate:           20.83%
+  Return Rate:                 20.58%
+
+--------------------------------------------------------------------------------
+4. PAYMENT INSIGHTS
+--------------------------------------------------------------------------------
+  Most Used Payment:           Online (258 orders, 21.50%)
+  Least Used Payment:          Gift Card (230 orders, 19.17%)
+
+  Payment Method Distribution:
+    Online                       258 ( 21.50%)
+    Cash                         246 ( 20.50%)
+    Credit Card                  234 ( 19.50%)
+    Debit Card                   232 ( 19.33%)
+    Gift Card                    230 ( 19.17%)
+
+--------------------------------------------------------------------------------
+5. REFERRAL INSIGHTS
+--------------------------------------------------------------------------------
+  Best Referral Source:        Instagram (259 orders, 21.58%)
+  Lowest Referral Source:      Referral (222 orders, 18.50%)
+
+================================================================================
+END OF BUSINESS INSIGHTS REPORT
+================================================================================

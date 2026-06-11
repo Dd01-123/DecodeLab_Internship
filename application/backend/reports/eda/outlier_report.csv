@@ -1,0 +1,5 @@
+Column,Total_Rows,IQR_Outlier_Count,IQR_Outlier_Pct,IQR_Min_Outlier,IQR_Max_Outlier,IQR_Lower_Bound,IQR_Upper_Bound,ZScore_Outlier_Count,ZScore_Outlier_Pct,ZScore_Max_ZScore,Combined_Outlier_Count,Combined_Outlier_Pct
+Quantity,1200,0,0.0,,,-1.0,7.0,0,0.0,1.4594,0,0.0
+UnitPrice,1200,0,0.0,,,-317.1987,1024.8312,0,0.0,1.7498,0,0.0
+ItemsInCart,1200,0,0.0,,,-0.5,11.5,0,0.0,1.9785,0,0.0
+TotalPrice,1200,8,0.67,3334.0,3456.4,-1341.4125,3330.4075,0,0.0,2.9303,8,0.67

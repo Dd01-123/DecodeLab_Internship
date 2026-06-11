@@ -1,0 +1,71 @@
+================================================================================
+                         EXECUTIVE SUMMARY REPORT
+                    E-Commerce Data Analysis
+================================================================================
+Generated: 2026-06-11 23:58:42
+
+--------------------------------------------------------------------------------
+1. DATASET OVERVIEW
+--------------------------------------------------------------------------------
+  Total Records:    1,200
+  Total Features:   14
+  Memory Usage:     0.6272 MB
+
+--------------------------------------------------------------------------------
+2. KEY FINDINGS
+--------------------------------------------------------------------------------
+  Quantity:
+    Mean: 2.9458, Median: 3.0, Std: 1.4076
+  UnitPrice:
+    Mean: 356.4128, Median: 364.21, Std: 197.1771
+  ItemsInCart:
+    Mean: 5.485, Median: 5.0, Std: 2.282
+  TotalPrice:
+    Mean: 1053.9683, Median: 823.615, Std: 819.8566
+
+--------------------------------------------------------------------------------
+3. DISTRIBUTION CLASSIFICATIONS
+--------------------------------------------------------------------------------
+  Quantity             Approximately Normal           (Confidence: 0.00%)
+  UnitPrice            Approximately Normal           (Confidence: 0.00%)
+  ItemsInCart          Approximately Uniform          (Confidence: 60.00%)
+  TotalPrice           Moderately Right Skewed        (Confidence: 44.51%)
+
+--------------------------------------------------------------------------------
+4. CORRELATION FINDINGS
+--------------------------------------------------------------------------------
+  Strong Positive Correlations:
+    UnitPrice <-> TotalPrice: 0.7171
+
+--------------------------------------------------------------------------------
+5. MAJOR OUTLIERS
+--------------------------------------------------------------------------------
+  TotalPrice: 8 outliers (0.67%)
+
+--------------------------------------------------------------------------------
+6. BUSINESS INSIGHTS SUMMARY
+--------------------------------------------------------------------------------
+  Total Revenue:               $1,264,761.96
+  Average Order Value:         $1,053.97
+  Total Unique Customers:      1,189
+  Fulfillment Rate:            38.83%
+  Cancellation Rate:           20.83%
+
+--------------------------------------------------------------------------------
+7. BUSINESS RECOMMENDATIONS
+--------------------------------------------------------------------------------
+  1. Focus marketing efforts on highest-performing products and referral channels
+  2. Investigate and reduce cancellation/return rates through improved quality control
+  3. Optimize inventory for high-demand products identified in analysis
+  4. Consider promotions for low-performing products to increase sales velocity
+  5. Analyze customer segments with highest lifetime value for targeted retention
+
+--------------------------------------------------------------------------------
+8. DATA QUALITY OBSERVATIONS
+--------------------------------------------------------------------------------
+  Overall Missing Data:        1.84%
+  Columns with Missing Data:   0
+
+================================================================================
+END OF EXECUTIVE SUMMARY
+================================================================================

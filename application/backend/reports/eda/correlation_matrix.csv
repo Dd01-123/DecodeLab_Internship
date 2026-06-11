@@ -1,0 +1,3 @@
+Type,Method,Column_1,Column_2,Correlation,Strength
+Strong Positive,Pearson,UnitPrice,TotalPrice,0.7171,Strong
+Strong Positive,Spearman,UnitPrice,TotalPrice,0.7554,Strong

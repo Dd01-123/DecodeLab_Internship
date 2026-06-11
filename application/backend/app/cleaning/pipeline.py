@@ -315,10 +315,16 @@ class DataCleaningPipeline:
                 original_columns = [col for col in self.raw_data.columns if col in df_clean.columns]
                 df_clean = df_clean[original_columns]
             
-            # Save with UTF-8 encoding, no index
-            df_clean.to_csv(self.output_file_path, 
-                           index=False, 
-                           encoding=config.ENCODING)
+            # Save using the format implied by the configured output extension.
+            suffix = self.output_file_path.suffix.lower()
+            if suffix in {'.xlsx', '.xls'}:
+                df_clean.to_excel(self.output_file_path, index=False)
+            else:
+                df_clean.to_csv(
+                    self.output_file_path,
+                    index=False,
+                    encoding=config.ENCODING,
+                )
             
             self._log_step('Save Clean Data', 'COMPLETED',
                           f"Saved {len(df_clean)} rows to {self.output_file_path}")
