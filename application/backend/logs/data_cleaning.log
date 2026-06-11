@@ -1,0 +1,89 @@
+2026-06-11 22:51:25 | INFO     | main            | ================================================================================
+2026-06-11 22:51:25 | INFO     | main            | E-COMMERCE DATA CLEANING PIPELINE
+2026-06-11 22:51:25 | INFO     | main            | ================================================================================
+2026-06-11 22:51:25 | INFO     | main            | Version: 1.0.0
+2026-06-11 22:51:25 | INFO     | main            | Started: 2026-06-11T22:51:25.752323
+2026-06-11 22:51:25 | INFO     | main            | Input File: E:\DecodeLabs_Internship\application\backend\data\raw\ecommerce_raw.xlsx
+2026-06-11 22:51:25 | INFO     | main            | Output File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
+2026-06-11 22:51:25 | INFO     | main            | ================================================================================
+2026-06-11 22:51:25 | INFO     | pipeline        | ================================================================================
+2026-06-11 22:51:25 | INFO     | pipeline        | E-COMMERCE DATA CLEANING PIPELINE - EXECUTION STARTED
+2026-06-11 22:51:25 | INFO     | pipeline        | ================================================================================
+2026-06-11 22:51:25 | INFO     | pipeline        | Start Time: 2026-06-11T22:51:25.753316
+2026-06-11 22:51:25 | INFO     | pipeline        | Raw Data: E:\DecodeLabs_Internship\application\backend\data\raw\ecommerce_raw.xlsx
+2026-06-11 22:51:25 | INFO     | pipeline        | Output: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
+2026-06-11 22:51:25 | INFO     | pipeline        | [PIPELINE] Step 'Load Data' started
+2026-06-11 22:51:25 | INFO     | data_loader     | File validation passed: ecommerce_raw.xlsx
+2026-06-11 22:51:25 | INFO     | data_loader     | File size: 0.10 MB
+2026-06-11 22:51:25 | INFO     | data_loader     | Detected file type: excel (extension: .xlsx)
+2026-06-11 22:51:25 | INFO     | data_loader     | Loading Excel file: ecommerce_raw.xlsx, sheet: 0
+2026-06-11 22:51:26 | INFO     | data_loader     | Successfully loaded 1200 rows from Excel
+2026-06-11 22:51:26 | INFO     | data_loader     | Data loading completed successfully. Shape: (1200, 14), Memory: 0.63 MB
+2026-06-11 22:51:26 | INFO     | pipeline        | [PIPELINE] Step 'Load Data' completed - Loaded 1200 rows, 14 columns
+2026-06-11 22:51:26 | INFO     | pipeline        | [PIPELINE] Step 'Initial Assessment' started
+2026-06-11 22:51:26 | INFO     | reporter        | Missing value analysis: 618 missing cells (3.68%)
+2026-06-11 22:51:26 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
+2026-06-11 22:51:27 | INFO     | reporter        | Generated statistical summary for 4 numeric columns
+2026-06-11 22:51:27 | INFO     | reporter        | Data quality report saved to: E:\DecodeLabs_Internship\application\backend\reports\data_quality_report.txt
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Initial Assessment' completed - Report saved to E:\DecodeLabs_Internship\application\backend\reports\data_quality_report.txt
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Missing Value Handling' started
+2026-06-11 22:51:27 | INFO     | cleaner         | Column 'CouponCode': 618 missing values detected
+2026-06-11 22:51:27 | INFO     | cleaner         | Total missing values detected across all columns: 618
+2026-06-11 22:51:27 | INFO     | cleaner         | Column 'CouponCode': Filled 309 missing values with empty string
+2026-06-11 22:51:27 | INFO     | cleaner         | Total missing values fixed: 309
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Missing Value Handling' completed - Detected 618 missing values, fixed 309
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Duplicate Removal' started
+2026-06-11 22:51:27 | INFO     | cleaner         | No duplicate records found
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Duplicate Removal' completed - Removed 0 duplicate records (1200 -> 1200 rows)
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Data Type Correction' started
+2026-06-11 22:51:27 | INFO     | cleaner         | Converting 'Date' column to datetime format
+2026-06-11 22:51:27 | INFO     | cleaner         | Column 'Date': Converted to datetime. Invalid dates: 0
+2026-06-11 22:51:27 | INFO     | cleaner         | Converting 'Quantity' to numeric format
+2026-06-11 22:51:27 | INFO     | cleaner         | Converting 'UnitPrice' to numeric format
+2026-06-11 22:51:27 | INFO     | cleaner         | Converting 'ItemsInCart' to numeric format
+2026-06-11 22:51:27 | INFO     | cleaner         | Converting 'TotalPrice' to numeric format
+2026-06-11 22:51:27 | INFO     | cleaner         | Cleaning text column: 'Product'
+2026-06-11 22:51:27 | INFO     | cleaner         | Cleaning text column: 'PaymentMethod'
+2026-06-11 22:51:27 | INFO     | cleaner         | Cleaning text column: 'OrderStatus'
+2026-06-11 22:51:27 | INFO     | cleaner         | Cleaning text column: 'ReferralSource'
+2026-06-11 22:51:27 | INFO     | cleaner         | Cleaning text column: 'CouponCode'
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Data Type Correction' completed - Applied data type corrections (dates, numeric formats, text)
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Text Standardization' started
+2026-06-11 22:51:27 | INFO     | cleaner         | Standardizing 'OrderStatus' values
+2026-06-11 22:51:27 | INFO     | cleaner         | Column 'OrderStatus': Standardized 0 values
+2026-06-11 22:51:27 | INFO     | cleaner         | Standardizing 'PaymentMethod' values
+2026-06-11 22:51:27 | INFO     | cleaner         | Column 'PaymentMethod': Standardized 0 values
+2026-06-11 22:51:27 | INFO     | cleaner         | Standardizing 'ReferralSource' values
+2026-06-11 22:51:27 | INFO     | cleaner         | Column 'ReferralSource': Standardized 0 values
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Text Standardization' completed - Standardized 0 text values
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Business Validation' started
+2026-06-11 22:51:27 | INFO     | validator       | ============================================================
+2026-06-11 22:51:27 | INFO     | validator       | STARTING BUSINESS DATA VALIDATION
+2026-06-11 22:51:27 | INFO     | validator       | ============================================================
+2026-06-11 22:51:27 | INFO     | validator       | Rule 1 (Quantity > 0): All records valid
+2026-06-11 22:51:27 | INFO     | validator       | Rule 2 (UnitPrice > 0): All records valid
+2026-06-11 22:51:27 | INFO     | validator       | Rule 3 (ItemsInCart >= Quantity): All records valid
+2026-06-11 22:51:27 | INFO     | validator       | Rule 4 (TotalPrice = Qty * UnitPrice): All records valid
+2026-06-11 22:51:27 | INFO     | validator       | Rule 5 (OrderStatus): All values standardized successfully
+2026-06-11 22:51:27 | WARNING  | validator       | Rule 6: 734 PaymentMethod values could not be standardized
+2026-06-11 22:51:27 | INFO     | validator       | ============================================================
+2026-06-11 22:51:27 | INFO     | validator       | BUSINESS DATA VALIDATION COMPLETED
+2026-06-11 22:51:27 | INFO     | validator       | ============================================================
+2026-06-11 22:51:27 | INFO     | validator       | Total validation issues found and corrected: 734
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Business Validation' completed - Validated and corrected 734 business rule violations
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Report Generation' started
+2026-06-11 22:51:27 | INFO     | reporter        | Missing value analysis: 618 missing cells (3.68%)
+2026-06-11 22:51:27 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
+2026-06-11 22:51:27 | INFO     | reporter        | Missing value analysis: 309 missing cells (1.84%)
+2026-06-11 22:51:27 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
+2026-06-11 22:51:27 | INFO     | reporter        | Cleaning summary report saved to: E:\DecodeLabs_Internship\application\backend\reports\cleaning_summary.txt
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Report Generation' completed - Reports saved to E:\DecodeLabs_Internship\application\backend\reports
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Save Clean Data' started
+2026-06-11 22:51:27 | INFO     | pipeline        | [PIPELINE] Step 'Save Clean Data' completed - Saved 1200 rows to E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
+2026-06-11 22:51:27 | INFO     | pipeline        | ================================================================================
+2026-06-11 22:51:27 | INFO     | pipeline        | E-COMMERCE DATA CLEANING PIPELINE - EXECUTION COMPLETED
+2026-06-11 22:51:27 | INFO     | pipeline        | ================================================================================
+2026-06-11 22:51:27 | INFO     | pipeline        | End Time: 2026-06-11T22:51:27.304544
+2026-06-11 22:51:27 | INFO     | pipeline        | Duration: 1.55 seconds
+2026-06-11 22:51:27 | INFO     | pipeline        | Output File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
+2026-06-11 22:51:27 | INFO     | main            | Pipeline completed successfully

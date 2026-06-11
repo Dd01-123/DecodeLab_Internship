@@ -1,0 +1,58 @@
+================================================================================
+                    DATA CLEANING SUMMARY REPORT
+               E-Commerce Data Cleaning Pipeline
+================================================================================
+Generated: 2026-06-11 22:51:27
+
+────────────────────────────────────────────────────────────────────────────────
+BEFORE CLEANING
+────────────────────────────────────────────────────────────────────────────────
+  Total Rows:          1,200
+  Total Columns:       14
+  Missing Values:      618
+  Duplicate Records:   0
+
+────────────────────────────────────────────────────────────────────────────────
+AFTER CLEANING
+────────────────────────────────────────────────────────────────────────────────
+  Total Rows:          1,200
+  Total Columns:       14
+  Missing Values:      309
+  Duplicate Records:   0
+
+────────────────────────────────────────────────────────────────────────────────
+IMPROVEMENT SUMMARY
+────────────────────────────────────────────────────────────────────────────────
+  Rows Removed:              0
+  Missing Values Fixed:      309
+  Duplicate Records Removed:   0
+
+────────────────────────────────────────────────────────────────────────────────
+DETAILED CLEANING OPERATIONS
+────────────────────────────────────────────────────────────────────────────────
+  missing_value_fill_empty_corrections              1
+  missing_values_fixed                            309
+  duplicates_removed                                0
+  invalid_dates_corrected                           0
+  data_type_corrections                             0
+  order_status_standardized                         0
+  payment_method_standardized                       0
+  referral_source_standardized                      0
+  quantity_invalid                                  0
+  unit_price_invalid                                0
+  items_in_cart_inconsistent                        0
+  total_price_mismatched                            0
+  total_price_calculated                            0
+  order_status_invalid                              0
+  payment_method_invalid                          734
+
+────────────────────────────────────────────────────────────────────────────────
+QUALITY SCORE
+────────────────────────────────────────────────────────────────────────────────
+  Before Cleaning:   96.32%
+  After Cleaning:    98.16%
+  Improvement:       +1.84%
+
+================================================================================
+END OF CLEANING SUMMARY REPORT
+================================================================================

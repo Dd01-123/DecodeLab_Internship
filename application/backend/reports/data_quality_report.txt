@@ -1,0 +1,115 @@
+================================================================================
+                    DATA QUALITY REPORT
+               E-Commerce Data Cleaning Pipeline
+================================================================================
+Generated: 2026-06-11 22:51:27
+
+────────────────────────────────────────────────────────────────────────────────
+1. DATASET OVERVIEW
+────────────────────────────────────────────────────────────────────────────────
+  Total Rows:          1,200
+  Total Columns:       14
+  Memory Usage:        0.63 MB
+
+  Column Names & Data Types:
+    OrderID                   object
+    Date                      datetime64[ns]
+    CustomerID                object
+    Product                   object
+    Quantity                  int64
+    UnitPrice                 float64
+    ShippingAddress           object
+    PaymentMethod             object
+    OrderStatus               object
+    TrackingNumber            object
+    ItemsInCart               int64
+    CouponCode                object
+    ReferralSource            object
+    TotalPrice                float64
+
+────────────────────────────────────────────────────────────────────────────────
+2. MISSING VALUES ANALYSIS
+────────────────────────────────────────────────────────────────────────────────
+  Total Missing Cells: 618
+  Total Cells:         16,800
+  Overall Missing %:   3.68%
+
+  Per Column Breakdown:
+    Column                       Missing        %            Type
+    ------------------------------------------------------------
+    OrderID                            0    0.00%              OK
+    Date                               0    0.00%              OK
+    CustomerID                         0    0.00%              OK
+    Product                            0    0.00%              OK
+    Quantity                           0    0.00%              OK
+    UnitPrice                          0    0.00%              OK
+    ShippingAddress                    0    0.00%              OK
+    PaymentMethod                      0    0.00%              OK
+    OrderStatus                        0    0.00%              OK
+    TrackingNumber                     0    0.00%              OK
+    ItemsInCart                        0    0.00%              OK
+    CouponCode                       618   51.50%            HIGH
+    ReferralSource                     0    0.00%              OK
+    TotalPrice                         0    0.00%              OK
+
+────────────────────────────────────────────────────────────────────────────────
+3. DUPLICATE ANALYSIS
+────────────────────────────────────────────────────────────────────────────────
+  Duplicate Records:   0
+  Duplicate %:         0.00%
+  Status:              ✅  NO DUPLICATES
+
+────────────────────────────────────────────────────────────────────────────────
+4. STATISTICAL SUMMARY (NUMERIC COLUMNS)
+────────────────────────────────────────────────────────────────────────────────
+  Column: Quantity
+    Count:    1,200
+    Mean:     2.9458
+    Median:   3.0
+    Std Dev:  1.4076
+    Min:      1.0
+    Max:      5.0
+    Q1:       2.0
+    Q2:       3.0
+    Q3:       4.0
+    IQR:      2.0
+
+  Column: UnitPrice
+    Count:    1,200
+    Mean:     356.4128
+    Median:   364.21
+    Std Dev:  197.1771
+    Min:      11.39
+    Max:      699.93
+    Q1:       186.0625
+    Q2:       364.21
+    Q3:       521.57
+    IQR:      335.5075
+
+  Column: ItemsInCart
+    Count:    1,200
+    Mean:     5.485
+    Median:   5.0
+    Std Dev:  2.282
+    Min:      1.0
+    Max:      10.0
+    Q1:       4.0
+    Q2:       5.0
+    Q3:       7.0
+    IQR:      3.0
+
+  Column: TotalPrice
+    Count:    1,200
+    Mean:     1053.9683
+    Median:   823.615
+    Std Dev:  819.8566
+    Min:      11.39
+    Max:      3456.4
+    Q1:       410.52
+    Q2:       823.615
+    Q3:       1578.475
+    IQR:      1167.955
+
+================================================================================
+END OF DATA QUALITY REPORT
+================================================================================

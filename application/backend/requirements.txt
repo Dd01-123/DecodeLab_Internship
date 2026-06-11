@@ -1,0 +1,26 @@
+fastapi
+numpy
+pandas
+matplotlib
+uvicorn
+openpyxl
+
+# Core Data Processing
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Excel Support (for .xlsx and .xls files)
+openpyxl>=3.0.0
+xlrd>=2.0.0
+
+# Type Hints (for Python < 3.9)
+typing-extensions>=4.0.0
+
+# Optional: Enhanced logging and monitoring
+# loguru>=0.6.0
+
+# Optional: Data validation framework
+# pydantic>=1.10.0
+
+# Optional: Progress bars for large datasets
+# tqdm>=4.64.0

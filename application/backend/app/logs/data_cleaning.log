@@ -1,0 +1,18 @@
+2026-06-11 22:50:12 | INFO     | main            | ================================================================================
+2026-06-11 22:50:12 | INFO     | main            | E-COMMERCE DATA CLEANING PIPELINE
+2026-06-11 22:50:12 | INFO     | main            | ================================================================================
+2026-06-11 22:50:12 | INFO     | main            | Version: 1.0.0
+2026-06-11 22:50:12 | INFO     | main            | Started: 2026-06-11T22:50:12.517329
+2026-06-11 22:50:12 | INFO     | main            | Input File: E:\DecodeLabs_Internship\application\backend\app\data\raw\ecommerce_raw.xlsx
+2026-06-11 22:50:12 | INFO     | main            | Output File: E:\DecodeLabs_Internship\application\backend\app\data\processed\ecommerce_cleaned.xlsx
+2026-06-11 22:50:12 | INFO     | main            | ================================================================================
+2026-06-11 22:50:12 | INFO     | pipeline        | ================================================================================
+2026-06-11 22:50:12 | INFO     | pipeline        | E-COMMERCE DATA CLEANING PIPELINE - EXECUTION STARTED
+2026-06-11 22:50:12 | INFO     | pipeline        | ================================================================================
+2026-06-11 22:50:12 | INFO     | pipeline        | Start Time: 2026-06-11T22:50:12.518835
+2026-06-11 22:50:12 | INFO     | pipeline        | Raw Data: E:\DecodeLabs_Internship\application\backend\app\data\raw\ecommerce_raw.xlsx
+2026-06-11 22:50:12 | INFO     | pipeline        | Output: E:\DecodeLabs_Internship\application\backend\app\data\processed\ecommerce_cleaned.xlsx
+2026-06-11 22:50:12 | INFO     | pipeline        | [PIPELINE] Step 'Load Data' started
+2026-06-11 22:50:12 | ERROR    | pipeline        | [PIPELINE] Step 'Load Data' failed: File not found: E:\DecodeLabs_Internship\application\backend\app\data\raw\ecommerce_raw.xlsx
+2026-06-11 22:50:12 | CRITICAL | pipeline        | Pipeline execution failed: Data loading failed: File not found: E:\DecodeLabs_Internship\application\backend\app\data\raw\ecommerce_raw.xlsx
+2026-06-11 22:50:12 | CRITICAL | main            | Pipeline execution failed: Data loading failed: File not found: E:\DecodeLabs_Internship\application\backend\app\data\raw\ecommerce_raw.xlsx
