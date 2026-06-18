@@ -1,0 +1,69 @@
+================================================================================
+SQL PRODUCT INSIGHTS
+================================================================================
+Generated: 2026-06-18 12:32:43
+
+Best Selling Products
+--------------------------------------------------------------------------------
+Product  units_sold  orders
+  Chair         562     178
+Printer         542     181
+ Laptop         535     173
+   Desk         508     170
+ Tablet         497     179
+Monitor         480     163
+  Phone         411     156
+
+Lowest Selling Products
+--------------------------------------------------------------------------------
+Product  units_sold  orders
+  Phone         411     156
+Monitor         480     163
+ Tablet         497     179
+   Desk         508     170
+ Laptop         535     173
+Printer         542     181
+  Chair         562     178
+
+Highest Revenue Products
+--------------------------------------------------------------------------------
+Product   revenue  units_sold
+  Chair 195620.11         562
+Printer 195612.61         542
+ Laptop 192126.56         535
+ Tablet 186568.95         497
+Monitor 175651.41         480
+   Desk 167459.93         508
+  Phone 151722.39         411
+
+Lowest Revenue Products
+--------------------------------------------------------------------------------
+Product   revenue  units_sold
+  Phone 151722.39         411
+   Desk 167459.93         508
+Monitor 175651.41         480
+ Tablet 186568.95         497
+ Laptop 192126.56         535
+Printer 195612.61         542
+  Chair 195620.11         562
+
+Product Ranking
+--------------------------------------------------------------------------------
+Product  units_sold   revenue  revenue_rank  volume_rank
+  Chair         562 195620.11             1            1
+Printer         542 195612.61             2            2
+ Laptop         535 192126.56             3            3
+ Tablet         497 186568.95             4            5
+Monitor         480 175651.41             5            6
+   Desk         508 167459.93             6            4
+  Phone         411 151722.39             7            7
+
+High Volume Low Revenue Products
+--------------------------------------------------------------------------------
+Product  units_sold   revenue
+   Desk         508 167459.93
+
+High Revenue Low Volume Products
+--------------------------------------------------------------------------------
+Product  units_sold   revenue
+ Tablet         497 186568.95

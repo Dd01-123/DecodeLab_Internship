@@ -12,6 +12,7 @@ from app.cleaning.config import config
 from app.cleaning.pipeline import PipelineExecutionError
 from app.core.orchestrator import AnalyticsPipeline
 from app.eda.eda_pipeline import EDAPipelineError
+from app.sql_analytics.analytics_pipeline import SQLAnalyticsPipelineError
 
 
 def setup_logging(verbose: bool = False) -> logging.Logger:
@@ -102,8 +103,10 @@ def main() -> int:
         print(f"Raw Rows:            {context.cleaning_results.get('raw_rows', 0):,}")
         print(f"Cleaned Rows:        {context.cleaning_results.get('cleaned_rows', 0):,}")
         print(f"Rows Analyzed:       {context.eda_results.get('rows_analyzed', 0):,}")
+        print(f"SQL Rows Loaded:     {context.sql_analytics_results.get('rows_loaded', 0):,}")
         print(f"Duration:            {context.duration_seconds:.2f} seconds")
         print(f"Clean Dataset:       {context.cleaned_data_file}")
+        print(f"SQLite Database:     {context.sql_analytics_results.get('database_file', config.ANALYTICS_DB_FILE)}")
         print(f"Reports Generated:   {len(context.generated_reports)}")
         print(f"Visualizations:      {len(context.generated_visualizations)}")
         print(f"Final Report:        {context.reports_dir / 'final_pipeline_report.txt'}")
@@ -111,7 +114,7 @@ def main() -> int:
 
         return 0
 
-    except (PipelineExecutionError, EDAPipelineError) as exc:
+    except (PipelineExecutionError, EDAPipelineError, SQLAnalyticsPipelineError) as exc:
         logger.critical("Pipeline execution failed: %s", exc)
         print("\nERROR: Pipeline execution failed")
         print(f"   {exc}")

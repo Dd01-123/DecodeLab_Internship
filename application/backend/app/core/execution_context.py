@@ -16,6 +16,7 @@ class ExecutionContext:
     end_time: Optional[datetime] = None
     cleaning_results: Dict[str, Any] = field(default_factory=dict)
     eda_results: Dict[str, Any] = field(default_factory=dict)
+    sql_analytics_results: Dict[str, Any] = field(default_factory=dict)
     generated_reports: List[Path] = field(default_factory=list)
     generated_visualizations: List[Path] = field(default_factory=list)
     recommendations: List[str] = field(default_factory=list)

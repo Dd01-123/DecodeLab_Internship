@@ -1,0 +1,32 @@
+================================================================================
+SQL PAYMENT INSIGHTS
+================================================================================
+Generated: 2026-06-18 12:32:43
+
+Most Used Payment Method
+--------------------------------------------------------------------------------
+PaymentMethod  orders
+       Online     258
+
+Least Used Payment Method
+--------------------------------------------------------------------------------
+PaymentMethod  orders
+    Gift Card     230
+
+Revenue By Payment Method
+--------------------------------------------------------------------------------
+PaymentMethod   revenue
+  Credit Card 263847.63
+       Online 262442.94
+         Cash 259786.29
+    Gift Card 246323.92
+   Debit Card 232361.18
+
+Payment Method Distribution
+--------------------------------------------------------------------------------
+PaymentMethod  orders  percentage
+       Online     258       21.50
+         Cash     246       20.50
+  Credit Card     234       19.50
+   Debit Card     232       19.33
+    Gift Card     230       19.17

@@ -1,218 +1,231 @@
-2026-06-11 23:58:26 | INFO     | main            | ================================================================================
-2026-06-11 23:58:26 | INFO     | main            | UNIFIED E-COMMERCE ANALYTICS PIPELINE
-2026-06-11 23:58:26 | INFO     | main            | ================================================================================
-2026-06-11 23:58:26 | INFO     | main            | Version: 2.0.0
-2026-06-11 23:58:26 | INFO     | main            | Started: 2026-06-11T23:58:26.378966
-2026-06-11 23:58:26 | INFO     | main            | Input File: E:\DecodeLabs_Internship\application\backend\data\raw\ecommerce_raw.xlsx
-2026-06-11 23:58:26 | INFO     | main            | Clean Output File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
-2026-06-11 23:58:26 | INFO     | main            | ================================================================================
-2026-06-11 23:58:26 | INFO     | orchestrator    | ================================================================================
-2026-06-11 23:58:26 | INFO     | orchestrator    | UNIFIED ANALYTICS PIPELINE - EXECUTION STARTED
-2026-06-11 23:58:26 | INFO     | orchestrator    | ================================================================================
-2026-06-11 23:58:26 | INFO     | orchestrator    | Starting unified pipeline cleaning phase
-2026-06-11 23:58:26 | INFO     | pipeline        | ================================================================================
-2026-06-11 23:58:26 | INFO     | pipeline        | E-COMMERCE DATA CLEANING PIPELINE - EXECUTION STARTED
-2026-06-11 23:58:26 | INFO     | pipeline        | ================================================================================
-2026-06-11 23:58:26 | INFO     | pipeline        | Start Time: 2026-06-11T23:58:26.379968
-2026-06-11 23:58:26 | INFO     | pipeline        | Raw Data: E:\DecodeLabs_Internship\application\backend\data\raw\ecommerce_raw.xlsx
-2026-06-11 23:58:26 | INFO     | pipeline        | Output: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Load Data' started
-2026-06-11 23:58:26 | INFO     | data_loader     | File validation passed: ecommerce_raw.xlsx
-2026-06-11 23:58:26 | INFO     | data_loader     | File size: 0.10 MB
-2026-06-11 23:58:26 | INFO     | data_loader     | Detected file type: excel (extension: .xlsx)
-2026-06-11 23:58:26 | INFO     | data_loader     | Loading Excel file: ecommerce_raw.xlsx, sheet: 0
-2026-06-11 23:58:26 | INFO     | data_loader     | Successfully loaded 1200 rows from Excel
-2026-06-11 23:58:26 | INFO     | data_loader     | Data loading completed successfully. Shape: (1200, 14), Memory: 0.63 MB
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Load Data' completed - Loaded 1200 rows, 14 columns
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Initial Assessment' started
-2026-06-11 23:58:26 | INFO     | reporter        | Missing value analysis: 618 missing cells (3.68%)
-2026-06-11 23:58:26 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
-2026-06-11 23:58:26 | INFO     | reporter        | Generated statistical summary for 4 numeric columns
-2026-06-11 23:58:26 | INFO     | reporter        | Data quality report saved to: E:\DecodeLabs_Internship\application\backend\reports\data_quality_report.txt
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Initial Assessment' completed - Report saved to E:\DecodeLabs_Internship\application\backend\reports\data_quality_report.txt
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Missing Value Handling' started
-2026-06-11 23:58:26 | INFO     | cleaner         | Column 'CouponCode': 618 missing values detected
-2026-06-11 23:58:26 | INFO     | cleaner         | Total missing values detected across all columns: 618
-2026-06-11 23:58:26 | INFO     | cleaner         | Column 'CouponCode': Filled 309 missing values with empty string
-2026-06-11 23:58:26 | INFO     | cleaner         | Total missing values fixed: 309
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Missing Value Handling' completed - Detected 618 missing values, fixed 309
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Duplicate Removal' started
-2026-06-11 23:58:26 | INFO     | cleaner         | No duplicate records found
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Duplicate Removal' completed - Removed 0 duplicate records (1200 -> 1200 rows)
-2026-06-11 23:58:26 | INFO     | pipeline        | [PIPELINE] Step 'Data Type Correction' started
-2026-06-11 23:58:26 | INFO     | cleaner         | Converting 'Date' column to datetime format
-2026-06-11 23:58:26 | INFO     | cleaner         | Column 'Date': Converted to datetime. Invalid dates: 0
-2026-06-11 23:58:26 | INFO     | cleaner         | Converting 'Quantity' to numeric format
-2026-06-11 23:58:26 | INFO     | cleaner         | Converting 'UnitPrice' to numeric format
-2026-06-11 23:58:26 | INFO     | cleaner         | Converting 'ItemsInCart' to numeric format
-2026-06-11 23:58:27 | INFO     | cleaner         | Converting 'TotalPrice' to numeric format
-2026-06-11 23:58:27 | INFO     | cleaner         | Cleaning text column: 'Product'
-2026-06-11 23:58:27 | INFO     | cleaner         | Cleaning text column: 'PaymentMethod'
-2026-06-11 23:58:27 | INFO     | cleaner         | Cleaning text column: 'OrderStatus'
-2026-06-11 23:58:27 | INFO     | cleaner         | Cleaning text column: 'ReferralSource'
-2026-06-11 23:58:27 | INFO     | cleaner         | Cleaning text column: 'CouponCode'
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Data Type Correction' completed - Applied data type corrections (dates, numeric formats, text)
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Text Standardization' started
-2026-06-11 23:58:27 | INFO     | cleaner         | Standardizing 'OrderStatus' values
-2026-06-11 23:58:27 | INFO     | cleaner         | Column 'OrderStatus': Standardized 0 values
-2026-06-11 23:58:27 | INFO     | cleaner         | Standardizing 'PaymentMethod' values
-2026-06-11 23:58:27 | INFO     | cleaner         | Column 'PaymentMethod': Standardized 0 values
-2026-06-11 23:58:27 | INFO     | cleaner         | Standardizing 'ReferralSource' values
-2026-06-11 23:58:27 | INFO     | cleaner         | Column 'ReferralSource': Standardized 0 values
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Text Standardization' completed - Standardized 0 text values
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Business Validation' started
-2026-06-11 23:58:27 | INFO     | validator       | ============================================================
-2026-06-11 23:58:27 | INFO     | validator       | STARTING BUSINESS DATA VALIDATION
-2026-06-11 23:58:27 | INFO     | validator       | ============================================================
-2026-06-11 23:58:27 | INFO     | validator       | Rule 1 (Quantity > 0): All records valid
-2026-06-11 23:58:27 | INFO     | validator       | Rule 2 (UnitPrice > 0): All records valid
-2026-06-11 23:58:27 | INFO     | validator       | Rule 3 (ItemsInCart >= Quantity): All records valid
-2026-06-11 23:58:27 | INFO     | validator       | Rule 4 (TotalPrice = Qty * UnitPrice): All records valid
-2026-06-11 23:58:27 | INFO     | validator       | Rule 5 (OrderStatus): All values standardized successfully
-2026-06-11 23:58:27 | WARNING  | validator       | Rule 6: 734 PaymentMethod values could not be standardized
-2026-06-11 23:58:27 | INFO     | validator       | ============================================================
-2026-06-11 23:58:27 | INFO     | validator       | BUSINESS DATA VALIDATION COMPLETED
-2026-06-11 23:58:27 | INFO     | validator       | ============================================================
-2026-06-11 23:58:27 | INFO     | validator       | Total validation issues found and corrected: 734
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Business Validation' completed - Validated and corrected 734 business rule violations
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Report Generation' started
-2026-06-11 23:58:27 | INFO     | reporter        | Missing value analysis: 618 missing cells (3.68%)
-2026-06-11 23:58:27 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
-2026-06-11 23:58:27 | INFO     | reporter        | Missing value analysis: 309 missing cells (1.84%)
-2026-06-11 23:58:27 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
-2026-06-11 23:58:27 | INFO     | reporter        | Cleaning summary report saved to: E:\DecodeLabs_Internship\application\backend\reports\cleaning_summary.txt
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Report Generation' completed - Reports saved to E:\DecodeLabs_Internship\application\backend\reports
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Save Clean Data' started
-2026-06-11 23:58:27 | INFO     | pipeline        | [PIPELINE] Step 'Save Clean Data' completed - Saved 1200 rows to E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
-2026-06-11 23:58:27 | INFO     | pipeline        | ================================================================================
-2026-06-11 23:58:27 | INFO     | pipeline        | E-COMMERCE DATA CLEANING PIPELINE - EXECUTION COMPLETED
-2026-06-11 23:58:27 | INFO     | pipeline        | ================================================================================
-2026-06-11 23:58:27 | INFO     | pipeline        | End Time: 2026-06-11T23:58:27.335368
-2026-06-11 23:58:27 | INFO     | pipeline        | Duration: 0.96 seconds
-2026-06-11 23:58:27 | INFO     | pipeline        | Output File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
-2026-06-11 23:58:27 | INFO     | orchestrator    | Starting unified pipeline EDA phase
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | ================================================================================
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | E-COMMERCE EDA PIPELINE - EXECUTION STARTED
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | ================================================================================
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | Start Time: 2026-06-11T23:58:27.336826
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | Data File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.xlsx
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | [EDA] Step 'Load Data' started
-2026-06-11 23:58:27 | INFO     | data_loader     | File validation passed: ecommerce_cleaned.xlsx
-2026-06-11 23:58:27 | INFO     | data_loader     | File size: 0.10 MB
-2026-06-11 23:58:27 | INFO     | data_loader     | Detected file type: excel (extension: .xlsx)
-2026-06-11 23:58:27 | INFO     | data_loader     | Loading Excel file: ecommerce_cleaned.xlsx, sheet: 0
-2026-06-11 23:58:27 | INFO     | data_loader     | Successfully loaded 1200 rows from Excel
-2026-06-11 23:58:27 | INFO     | data_loader     | Data loading completed successfully. Shape: (1200, 14), Memory: 0.63 MB
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | [EDA] Step 'Load Data' completed - Loaded 1200 rows, 14 columns
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | [EDA] Step 'Dataset Profiling' started
-2026-06-11 23:58:27 | INFO     | profiler        | Generating complete dataset profile...
-2026-06-11 23:58:27 | INFO     | profiler        | Dataset structure: 1200 rows, 14 columns
-2026-06-11 23:58:27 | INFO     | profiler        | Analyzed data types for 14 columns
-2026-06-11 23:58:27 | INFO     | profiler        | Missing values: 309 cells (1.84%)
-2026-06-11 23:58:27 | INFO     | profiler        | Cardinality analysis complete for 14 columns
-2026-06-11 23:58:27 | INFO     | profiler        | Dataset profile generation complete
-2026-06-11 23:58:27 | INFO     | profiler        | Dataset profile report saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\dataset_profile.txt
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | [EDA] Step 'Dataset Profiling' completed - Profile saved to reports/eda/dataset_profile.txt
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | [EDA] Step 'Descriptive Statistics' started
-2026-06-11 23:58:27 | INFO     | statistics_analyzer | Identified 4 numeric columns: ['Quantity', 'UnitPrice', 'ItemsInCart', 'TotalPrice']
-2026-06-11 23:58:27 | INFO     | statistics_analyzer | Running descriptive statistics on 4 columns...
-2026-06-11 23:58:27 | INFO     | statistics_analyzer | Descriptive statistics analysis complete
-2026-06-11 23:58:27 | INFO     | statistics_analyzer | Descriptive statistics saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\descriptive_statistics.csv
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | [EDA] Step 'Descriptive Statistics' completed - Statistics saved to reports/eda/descriptive_statistics.csv
-2026-06-11 23:58:27 | INFO     | eda_pipeline    | [EDA] Step 'Distribution Analysis' started
-2026-06-11 23:58:27 | INFO     | distribution_analyzer | Analyzing distributions for 4 columns...
-2026-06-11 23:58:28 | INFO     | distribution_analyzer | Distribution plot saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\Quantity_distribution.png
-2026-06-11 23:58:28 | INFO     | distribution_analyzer | Distribution plot saved for 'UnitPrice': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\UnitPrice_distribution.png
-2026-06-11 23:58:29 | INFO     | distribution_analyzer | Distribution plot saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\ItemsInCart_distribution.png
-2026-06-11 23:58:29 | INFO     | distribution_analyzer | Distribution plot saved for 'TotalPrice': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\TotalPrice_distribution.png
-2026-06-11 23:58:29 | INFO     | distribution_analyzer | Distribution analysis complete. Generated 4 plots
-2026-06-11 23:58:29 | INFO     | eda_pipeline    | [EDA] Step 'Distribution Analysis' completed - Generated 4 distribution plots
-2026-06-11 23:58:29 | INFO     | eda_pipeline    | [EDA] Step 'Outlier Detection' started
-2026-06-11 23:58:29 | INFO     | outlier_detector | Running outlier detection on 4 columns...
-2026-06-11 23:58:30 | INFO     | outlier_detector | Outlier boxplot saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\Quantity_outliers.png
-2026-06-11 23:58:30 | INFO     | outlier_detector | Outlier boxplot saved for 'UnitPrice': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\UnitPrice_outliers.png
-2026-06-11 23:58:30 | INFO     | outlier_detector | Outlier boxplot saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\ItemsInCart_outliers.png
-2026-06-11 23:58:31 | INFO     | outlier_detector | Outlier boxplot saved for 'TotalPrice': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\TotalPrice_outliers.png
-2026-06-11 23:58:31 | INFO     | outlier_detector | Outlier detection complete for 4 columns
-2026-06-11 23:58:31 | INFO     | outlier_detector | Outlier report saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\outlier_report.csv
-2026-06-11 23:58:31 | INFO     | eda_pipeline    | [EDA] Step 'Outlier Detection' completed - Outlier report saved to reports/eda/outlier_report.csv
-2026-06-11 23:58:31 | INFO     | eda_pipeline    | [EDA] Step 'Correlation Analysis' started
-2026-06-11 23:58:31 | INFO     | correlation_analyzer | Starting correlation analysis...
-2026-06-11 23:58:31 | INFO     | correlation_analyzer | Pearson correlation matrix calculated: (4, 4)
-2026-06-11 23:58:31 | INFO     | correlation_analyzer | Spearman correlation matrix calculated: (4, 4)
-2026-06-11 23:58:31 | INFO     | correlation_analyzer | Pearson correlation heatmap saved: E:\DecodeLabs_Internship\application\backend\visualizations\correlations\pearson_correlation_heatmap.png
-2026-06-11 23:58:31 | INFO     | correlation_analyzer | Spearman correlation heatmap saved: E:\DecodeLabs_Internship\application\backend\visualizations\correlations\spearman_correlation_heatmap.png
-2026-06-11 23:58:31 | INFO     | correlation_analyzer | Correlation analysis complete
-2026-06-11 23:58:31 | INFO     | correlation_analyzer | Correlation reports saved to: E:\DecodeLabs_Internship\application\backend\reports\eda
-2026-06-11 23:58:31 | INFO     | eda_pipeline    | [EDA] Step 'Correlation Analysis' completed - Correlation matrices saved to reports/eda/
-2026-06-11 23:58:31 | INFO     | eda_pipeline    | [EDA] Step 'Categorical Analysis' started
-2026-06-11 23:58:31 | INFO     | categorical_analyzer | Identified 11 categorical columns: ['OrderID', 'CustomerID', 'Product', 'ShippingAddress', 'PaymentMethod', 'OrderStatus', 'TrackingNumber', 'CouponCode', 'ReferralSource', 'Quantity', 'ItemsInCart']
-2026-06-11 23:58:31 | INFO     | categorical_analyzer | Analyzing 11 categorical columns...
-2026-06-11 23:58:32 | INFO     | categorical_analyzer | Bar chart saved for 'OrderID': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderID_bar_chart.png
-2026-06-11 23:58:32 | INFO     | categorical_analyzer | Bar chart saved for 'CustomerID': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CustomerID_bar_chart.png
-2026-06-11 23:58:32 | INFO     | categorical_analyzer | Bar chart saved for 'Product': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Product_bar_chart.png
-2026-06-11 23:58:33 | INFO     | categorical_analyzer | Pie chart saved for 'Product': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Product_pie_chart.png
-2026-06-11 23:58:33 | INFO     | categorical_analyzer | Bar chart saved for 'ShippingAddress': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ShippingAddress_bar_chart.png
-2026-06-11 23:58:33 | INFO     | categorical_analyzer | Bar chart saved for 'PaymentMethod': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\PaymentMethod_bar_chart.png
-2026-06-11 23:58:33 | INFO     | categorical_analyzer | Pie chart saved for 'PaymentMethod': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\PaymentMethod_pie_chart.png
-2026-06-11 23:58:34 | INFO     | categorical_analyzer | Bar chart saved for 'OrderStatus': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderStatus_bar_chart.png
-2026-06-11 23:58:34 | INFO     | categorical_analyzer | Pie chart saved for 'OrderStatus': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderStatus_pie_chart.png
-2026-06-11 23:58:34 | INFO     | categorical_analyzer | Bar chart saved for 'TrackingNumber': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\TrackingNumber_bar_chart.png
-2026-06-11 23:58:35 | INFO     | categorical_analyzer | Bar chart saved for 'CouponCode': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CouponCode_bar_chart.png
-2026-06-11 23:58:35 | INFO     | categorical_analyzer | Pie chart saved for 'CouponCode': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CouponCode_pie_chart.png
-2026-06-11 23:58:35 | INFO     | categorical_analyzer | Bar chart saved for 'ReferralSource': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ReferralSource_bar_chart.png
-2026-06-11 23:58:35 | INFO     | categorical_analyzer | Pie chart saved for 'ReferralSource': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ReferralSource_pie_chart.png
-2026-06-11 23:58:36 | INFO     | categorical_analyzer | Bar chart saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Quantity_bar_chart.png
-2026-06-11 23:58:36 | INFO     | categorical_analyzer | Pie chart saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Quantity_pie_chart.png
-2026-06-11 23:58:36 | INFO     | categorical_analyzer | Bar chart saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ItemsInCart_bar_chart.png
-2026-06-11 23:58:36 | INFO     | categorical_analyzer | Pie chart saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ItemsInCart_pie_chart.png
-2026-06-11 23:58:36 | INFO     | categorical_analyzer | Categorical analysis complete for 11 columns
-2026-06-11 23:58:36 | INFO     | categorical_analyzer | Categorical summary saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\categorical_summary.csv
-2026-06-11 23:58:36 | INFO     | eda_pipeline    | [EDA] Step 'Categorical Analysis' completed - Categorical summary saved to reports/eda/categorical_summary.csv
-2026-06-11 23:58:36 | INFO     | eda_pipeline    | [EDA] Step 'Trend Analysis' started
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Identified 1 date columns: ['Date']
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Starting trend analysis...
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Daily trends calculated for 'Quantity': 671 days
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Daily trends calculated for 'UnitPrice': 671 days
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Daily trends calculated for 'ItemsInCart': 671 days
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Daily trends calculated for 'TotalPrice': 671 days
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Monthly trends calculated for 'Quantity': 30 months
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Monthly trends calculated for 'UnitPrice': 30 months
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Monthly trends calculated for 'ItemsInCart': 30 months
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Monthly trends calculated for 'TotalPrice': 30 months
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'Quantity': 52 weeks
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'UnitPrice': 52 weeks
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'ItemsInCart': 52 weeks
-2026-06-11 23:58:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'TotalPrice': 52 weeks
-2026-06-11 23:58:37 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_Quantity_trend.png
-2026-06-11 23:58:37 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
-2026-06-11 23:58:38 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_UnitPrice_trend.png
-2026-06-11 23:58:38 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
-2026-06-11 23:58:39 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_ItemsInCart_trend.png
-2026-06-11 23:58:39 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
-2026-06-11 23:58:40 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_TotalPrice_trend.png
-2026-06-11 23:58:40 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
-2026-06-11 23:58:41 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_Quantity_trend.png
-2026-06-11 23:58:41 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_UnitPrice_trend.png
-2026-06-11 23:58:42 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_ItemsInCart_trend.png
-2026-06-11 23:58:42 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_TotalPrice_trend.png
-2026-06-11 23:58:42 | INFO     | trend_analyzer  | Trend analysis complete
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | [EDA] Step 'Trend Analysis' completed - Trend charts saved to visualizations/trends/
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | [EDA] Step 'Business Insights' started
-2026-06-11 23:58:42 | INFO     | business_insight_generator | Generating business insights...
-2026-06-11 23:58:42 | INFO     | business_insight_generator | Revenue insights generated
-2026-06-11 23:58:42 | INFO     | business_insight_generator | Customer insights generated
-2026-06-11 23:58:42 | INFO     | business_insight_generator | Order insights generated
-2026-06-11 23:58:42 | INFO     | business_insight_generator | Payment insights generated
-2026-06-11 23:58:42 | INFO     | business_insight_generator | Referral insights generated
-2026-06-11 23:58:42 | INFO     | business_insight_generator | All business insights generated
-2026-06-11 23:58:42 | INFO     | business_insight_generator | Business insights report saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\business_insights.txt
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | [EDA] Step 'Business Insights' completed - Insights report saved to reports/eda/business_insights.txt
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | [EDA] Step 'Executive Summary' started
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | [EDA] Step 'Executive Summary' completed - Summary saved to reports/eda/executive_summary.txt
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | ================================================================================
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | E-COMMERCE EDA PIPELINE - EXECUTION COMPLETED
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | ================================================================================
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | End Time: 2026-06-11T23:58:42.993076
-2026-06-11 23:58:42 | INFO     | eda_pipeline    | Duration: 15.66 seconds
-2026-06-11 23:58:43 | INFO     | orchestrator    | Unified analytics pipeline completed successfully
+2026-06-18 12:32:19 | INFO     | main            | ================================================================================
+2026-06-18 12:32:19 | INFO     | main            | UNIFIED E-COMMERCE ANALYTICS PIPELINE
+2026-06-18 12:32:19 | INFO     | main            | ================================================================================
+2026-06-18 12:32:19 | INFO     | main            | Version: 2.0.0
+2026-06-18 12:32:19 | INFO     | main            | Started: 2026-06-18T12:32:19.527925
+2026-06-18 12:32:19 | INFO     | main            | Input File: E:\DecodeLabs_Internship\application\backend\data\raw\ecommerce_raw.xlsx
+2026-06-18 12:32:19 | INFO     | main            | Clean Output File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.csv
+2026-06-18 12:32:19 | INFO     | main            | ================================================================================
+2026-06-18 12:32:19 | INFO     | orchestrator    | ================================================================================
+2026-06-18 12:32:19 | INFO     | orchestrator    | UNIFIED ANALYTICS PIPELINE - EXECUTION STARTED
+2026-06-18 12:32:19 | INFO     | orchestrator    | ================================================================================
+2026-06-18 12:32:19 | INFO     | orchestrator    | Starting unified pipeline cleaning phase
+2026-06-18 12:32:19 | INFO     | pipeline        | ================================================================================
+2026-06-18 12:32:19 | INFO     | pipeline        | E-COMMERCE DATA CLEANING PIPELINE - EXECUTION STARTED
+2026-06-18 12:32:19 | INFO     | pipeline        | ================================================================================
+2026-06-18 12:32:19 | INFO     | pipeline        | Start Time: 2026-06-18T12:32:19.532588
+2026-06-18 12:32:19 | INFO     | pipeline        | Raw Data: E:\DecodeLabs_Internship\application\backend\data\raw\ecommerce_raw.xlsx
+2026-06-18 12:32:19 | INFO     | pipeline        | Output: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.csv
+2026-06-18 12:32:19 | INFO     | pipeline        | [PIPELINE] Step 'Load Data' started
+2026-06-18 12:32:19 | INFO     | data_loader     | File validation passed: ecommerce_raw.xlsx
+2026-06-18 12:32:19 | INFO     | data_loader     | File size: 0.10 MB
+2026-06-18 12:32:19 | INFO     | data_loader     | Detected file type: excel (extension: .xlsx)
+2026-06-18 12:32:19 | INFO     | data_loader     | Loading Excel file: ecommerce_raw.xlsx, sheet: 0
+2026-06-18 12:32:20 | INFO     | data_loader     | Successfully loaded 1200 rows from Excel
+2026-06-18 12:32:20 | INFO     | data_loader     | Data loading completed successfully. Shape: (1200, 14), Memory: 0.63 MB
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Load Data' completed - Loaded 1200 rows, 14 columns
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Initial Assessment' started
+2026-06-18 12:32:20 | INFO     | reporter        | Missing value analysis: 618 missing cells (3.68%)
+2026-06-18 12:32:20 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
+2026-06-18 12:32:20 | INFO     | reporter        | Generated statistical summary for 4 numeric columns
+2026-06-18 12:32:20 | INFO     | reporter        | Data quality report saved to: E:\DecodeLabs_Internship\application\backend\reports\data_quality_report.txt
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Initial Assessment' completed - Report saved to E:\DecodeLabs_Internship\application\backend\reports\data_quality_report.txt
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Missing Value Handling' started
+2026-06-18 12:32:20 | INFO     | cleaner         | Column 'CouponCode': 618 missing values detected
+2026-06-18 12:32:20 | INFO     | cleaner         | Total missing values detected across all columns: 618
+2026-06-18 12:32:20 | INFO     | cleaner         | Column 'CouponCode': Filled 309 missing values with empty string
+2026-06-18 12:32:20 | INFO     | cleaner         | Total missing values fixed: 309
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Missing Value Handling' completed - Detected 618 missing values, fixed 309
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Duplicate Removal' started
+2026-06-18 12:32:20 | INFO     | cleaner         | No duplicate records found
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Duplicate Removal' completed - Removed 0 duplicate records (1200 -> 1200 rows)
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Data Type Correction' started
+2026-06-18 12:32:20 | INFO     | cleaner         | Converting 'Date' column to datetime format
+2026-06-18 12:32:20 | INFO     | cleaner         | Column 'Date': Converted to datetime. Invalid dates: 0
+2026-06-18 12:32:20 | INFO     | cleaner         | Converting 'Quantity' to numeric format
+2026-06-18 12:32:20 | INFO     | cleaner         | Converting 'UnitPrice' to numeric format
+2026-06-18 12:32:20 | INFO     | cleaner         | Converting 'ItemsInCart' to numeric format
+2026-06-18 12:32:20 | INFO     | cleaner         | Converting 'TotalPrice' to numeric format
+2026-06-18 12:32:20 | INFO     | cleaner         | Cleaning text column: 'Product'
+2026-06-18 12:32:20 | INFO     | cleaner         | Cleaning text column: 'PaymentMethod'
+2026-06-18 12:32:20 | INFO     | cleaner         | Cleaning text column: 'OrderStatus'
+2026-06-18 12:32:20 | INFO     | cleaner         | Cleaning text column: 'ReferralSource'
+2026-06-18 12:32:20 | INFO     | cleaner         | Cleaning text column: 'CouponCode'
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Data Type Correction' completed - Applied data type corrections (dates, numeric formats, text)
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Text Standardization' started
+2026-06-18 12:32:20 | INFO     | cleaner         | Standardizing 'OrderStatus' values
+2026-06-18 12:32:20 | INFO     | cleaner         | Column 'OrderStatus': Standardized 0 values
+2026-06-18 12:32:20 | INFO     | cleaner         | Standardizing 'PaymentMethod' values
+2026-06-18 12:32:20 | INFO     | cleaner         | Column 'PaymentMethod': Standardized 0 values
+2026-06-18 12:32:20 | INFO     | cleaner         | Standardizing 'ReferralSource' values
+2026-06-18 12:32:20 | INFO     | cleaner         | Column 'ReferralSource': Standardized 0 values
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Text Standardization' completed - Standardized 0 text values
+2026-06-18 12:32:20 | INFO     | pipeline        | [PIPELINE] Step 'Business Validation' started
+2026-06-18 12:32:20 | INFO     | validator       | ============================================================
+2026-06-18 12:32:20 | INFO     | validator       | STARTING BUSINESS DATA VALIDATION
+2026-06-18 12:32:20 | INFO     | validator       | ============================================================
+2026-06-18 12:32:20 | INFO     | validator       | Rule 1 (Quantity > 0): All records valid
+2026-06-18 12:32:20 | INFO     | validator       | Rule 2 (UnitPrice > 0): All records valid
+2026-06-18 12:32:20 | INFO     | validator       | Rule 3 (ItemsInCart >= Quantity): All records valid
+2026-06-18 12:32:20 | INFO     | validator       | Rule 4 (TotalPrice = Qty * UnitPrice): All records valid
+2026-06-18 12:32:20 | INFO     | validator       | Rule 5 (OrderStatus): All values standardized successfully
+2026-06-18 12:32:21 | WARNING  | validator       | Rule 6: 734 PaymentMethod values could not be standardized
+2026-06-18 12:32:21 | INFO     | validator       | ============================================================
+2026-06-18 12:32:21 | INFO     | validator       | BUSINESS DATA VALIDATION COMPLETED
+2026-06-18 12:32:21 | INFO     | validator       | ============================================================
+2026-06-18 12:32:21 | INFO     | validator       | Total validation issues found and corrected: 734
+2026-06-18 12:32:21 | INFO     | pipeline        | [PIPELINE] Step 'Business Validation' completed - Validated and corrected 734 business rule violations
+2026-06-18 12:32:21 | INFO     | pipeline        | [PIPELINE] Step 'Report Generation' started
+2026-06-18 12:32:21 | INFO     | reporter        | Missing value analysis: 618 missing cells (3.68%)
+2026-06-18 12:32:21 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
+2026-06-18 12:32:21 | INFO     | reporter        | Missing value analysis: 309 missing cells (1.84%)
+2026-06-18 12:32:21 | INFO     | reporter        | Duplicate analysis: 0 duplicate records (0.0%)
+2026-06-18 12:32:21 | INFO     | reporter        | Cleaning summary report saved to: E:\DecodeLabs_Internship\application\backend\reports\cleaning_summary.txt
+2026-06-18 12:32:21 | INFO     | pipeline        | [PIPELINE] Step 'Report Generation' completed - Reports saved to E:\DecodeLabs_Internship\application\backend\reports
+2026-06-18 12:32:21 | INFO     | pipeline        | [PIPELINE] Step 'Save Clean Data' started
+2026-06-18 12:32:21 | INFO     | pipeline        | [PIPELINE] Step 'Save Clean Data' completed - Saved 1200 rows to E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.csv
+2026-06-18 12:32:21 | INFO     | pipeline        | ================================================================================
+2026-06-18 12:32:21 | INFO     | pipeline        | E-COMMERCE DATA CLEANING PIPELINE - EXECUTION COMPLETED
+2026-06-18 12:32:21 | INFO     | pipeline        | ================================================================================
+2026-06-18 12:32:21 | INFO     | pipeline        | End Time: 2026-06-18T12:32:21.169834
+2026-06-18 12:32:21 | INFO     | pipeline        | Duration: 1.64 seconds
+2026-06-18 12:32:21 | INFO     | pipeline        | Output File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.csv
+2026-06-18 12:32:21 | INFO     | orchestrator    | Starting unified pipeline EDA phase
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | ================================================================================
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | E-COMMERCE EDA PIPELINE - EXECUTION STARTED
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | ================================================================================
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | Start Time: 2026-06-18T12:32:21.171203
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | Data File: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.csv
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | [EDA] Step 'Load Data' started
+2026-06-18 12:32:21 | INFO     | data_loader     | File validation passed: ecommerce_cleaned.csv
+2026-06-18 12:32:21 | INFO     | data_loader     | File size: 0.13 MB
+2026-06-18 12:32:21 | INFO     | data_loader     | Detected file type: csv (extension: .csv)
+2026-06-18 12:32:21 | INFO     | data_loader     | Loading CSV file: ecommerce_cleaned.csv
+2026-06-18 12:32:21 | INFO     | data_loader     | Successfully loaded 1200 rows from CSV
+2026-06-18 12:32:21 | INFO     | data_loader     | Data loading completed successfully. Shape: (1200, 14), Memory: 0.69 MB
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | [EDA] Step 'Load Data' completed - Loaded 1200 rows, 14 columns
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | [EDA] Step 'Dataset Profiling' started
+2026-06-18 12:32:21 | INFO     | profiler        | Generating complete dataset profile...
+2026-06-18 12:32:21 | INFO     | profiler        | Dataset structure: 1200 rows, 14 columns
+2026-06-18 12:32:21 | INFO     | profiler        | Analyzed data types for 14 columns
+2026-06-18 12:32:21 | INFO     | profiler        | Missing values: 309 cells (1.84%)
+2026-06-18 12:32:21 | INFO     | profiler        | Cardinality analysis complete for 14 columns
+2026-06-18 12:32:21 | INFO     | profiler        | Dataset profile generation complete
+2026-06-18 12:32:21 | INFO     | profiler        | Dataset profile report saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\dataset_profile.txt
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | [EDA] Step 'Dataset Profiling' completed - Profile saved to reports/eda/dataset_profile.txt
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | [EDA] Step 'Descriptive Statistics' started
+2026-06-18 12:32:21 | INFO     | statistics_analyzer | Identified 4 numeric columns: ['Quantity', 'UnitPrice', 'ItemsInCart', 'TotalPrice']
+2026-06-18 12:32:21 | INFO     | statistics_analyzer | Running descriptive statistics on 4 columns...
+2026-06-18 12:32:21 | INFO     | statistics_analyzer | Descriptive statistics analysis complete
+2026-06-18 12:32:21 | INFO     | statistics_analyzer | Descriptive statistics saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\descriptive_statistics.csv
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | [EDA] Step 'Descriptive Statistics' completed - Statistics saved to reports/eda/descriptive_statistics.csv
+2026-06-18 12:32:21 | INFO     | eda_pipeline    | [EDA] Step 'Distribution Analysis' started
+2026-06-18 12:32:21 | INFO     | distribution_analyzer | Analyzing distributions for 4 columns...
+2026-06-18 12:32:22 | INFO     | distribution_analyzer | Distribution plot saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\Quantity_distribution.png
+2026-06-18 12:32:24 | INFO     | distribution_analyzer | Distribution plot saved for 'UnitPrice': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\UnitPrice_distribution.png
+2026-06-18 12:32:24 | INFO     | distribution_analyzer | Distribution plot saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\ItemsInCart_distribution.png
+2026-06-18 12:32:25 | INFO     | distribution_analyzer | Distribution plot saved for 'TotalPrice': E:\DecodeLabs_Internship\application\backend\visualizations\distributions\TotalPrice_distribution.png
+2026-06-18 12:32:25 | INFO     | distribution_analyzer | Distribution analysis complete. Generated 4 plots
+2026-06-18 12:32:25 | INFO     | eda_pipeline    | [EDA] Step 'Distribution Analysis' completed - Generated 4 distribution plots
+2026-06-18 12:32:25 | INFO     | eda_pipeline    | [EDA] Step 'Outlier Detection' started
+2026-06-18 12:32:25 | INFO     | outlier_detector | Running outlier detection on 4 columns...
+2026-06-18 12:32:26 | INFO     | outlier_detector | Outlier boxplot saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\Quantity_outliers.png
+2026-06-18 12:32:27 | INFO     | outlier_detector | Outlier boxplot saved for 'UnitPrice': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\UnitPrice_outliers.png
+2026-06-18 12:32:27 | INFO     | outlier_detector | Outlier boxplot saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\ItemsInCart_outliers.png
+2026-06-18 12:32:28 | INFO     | outlier_detector | Outlier boxplot saved for 'TotalPrice': E:\DecodeLabs_Internship\application\backend\visualizations\outliers\TotalPrice_outliers.png
+2026-06-18 12:32:28 | INFO     | outlier_detector | Outlier detection complete for 4 columns
+2026-06-18 12:32:28 | INFO     | outlier_detector | Outlier report saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\outlier_report.csv
+2026-06-18 12:32:28 | INFO     | eda_pipeline    | [EDA] Step 'Outlier Detection' completed - Outlier report saved to reports/eda/outlier_report.csv
+2026-06-18 12:32:28 | INFO     | eda_pipeline    | [EDA] Step 'Correlation Analysis' started
+2026-06-18 12:32:28 | INFO     | correlation_analyzer | Starting correlation analysis...
+2026-06-18 12:32:28 | INFO     | correlation_analyzer | Pearson correlation matrix calculated: (4, 4)
+2026-06-18 12:32:28 | INFO     | correlation_analyzer | Spearman correlation matrix calculated: (4, 4)
+2026-06-18 12:32:29 | INFO     | correlation_analyzer | Pearson correlation heatmap saved: E:\DecodeLabs_Internship\application\backend\visualizations\correlations\pearson_correlation_heatmap.png
+2026-06-18 12:32:29 | INFO     | correlation_analyzer | Spearman correlation heatmap saved: E:\DecodeLabs_Internship\application\backend\visualizations\correlations\spearman_correlation_heatmap.png
+2026-06-18 12:32:29 | INFO     | correlation_analyzer | Correlation analysis complete
+2026-06-18 12:32:29 | INFO     | correlation_analyzer | Correlation reports saved to: E:\DecodeLabs_Internship\application\backend\reports\eda
+2026-06-18 12:32:29 | INFO     | eda_pipeline    | [EDA] Step 'Correlation Analysis' completed - Correlation matrices saved to reports/eda/
+2026-06-18 12:32:29 | INFO     | eda_pipeline    | [EDA] Step 'Categorical Analysis' started
+2026-06-18 12:32:29 | INFO     | categorical_analyzer | Identified 11 categorical columns: ['OrderID', 'CustomerID', 'Product', 'ShippingAddress', 'PaymentMethod', 'OrderStatus', 'TrackingNumber', 'CouponCode', 'ReferralSource', 'Quantity', 'ItemsInCart']
+2026-06-18 12:32:29 | INFO     | categorical_analyzer | Analyzing 11 categorical columns...
+2026-06-18 12:32:30 | INFO     | categorical_analyzer | Bar chart saved for 'OrderID': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderID_bar_chart.png
+2026-06-18 12:32:30 | INFO     | categorical_analyzer | Bar chart saved for 'CustomerID': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CustomerID_bar_chart.png
+2026-06-18 12:32:31 | INFO     | categorical_analyzer | Bar chart saved for 'Product': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Product_bar_chart.png
+2026-06-18 12:32:31 | INFO     | categorical_analyzer | Pie chart saved for 'Product': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Product_pie_chart.png
+2026-06-18 12:32:31 | INFO     | categorical_analyzer | Bar chart saved for 'ShippingAddress': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ShippingAddress_bar_chart.png
+2026-06-18 12:32:32 | INFO     | categorical_analyzer | Bar chart saved for 'PaymentMethod': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\PaymentMethod_bar_chart.png
+2026-06-18 12:32:32 | INFO     | categorical_analyzer | Pie chart saved for 'PaymentMethod': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\PaymentMethod_pie_chart.png
+2026-06-18 12:32:32 | INFO     | categorical_analyzer | Bar chart saved for 'OrderStatus': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderStatus_bar_chart.png
+2026-06-18 12:32:33 | INFO     | categorical_analyzer | Pie chart saved for 'OrderStatus': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderStatus_pie_chart.png
+2026-06-18 12:32:33 | INFO     | categorical_analyzer | Bar chart saved for 'TrackingNumber': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\TrackingNumber_bar_chart.png
+2026-06-18 12:32:33 | INFO     | categorical_analyzer | Bar chart saved for 'CouponCode': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CouponCode_bar_chart.png
+2026-06-18 12:32:34 | INFO     | categorical_analyzer | Pie chart saved for 'CouponCode': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CouponCode_pie_chart.png
+2026-06-18 12:32:34 | INFO     | categorical_analyzer | Bar chart saved for 'ReferralSource': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ReferralSource_bar_chart.png
+2026-06-18 12:32:34 | INFO     | categorical_analyzer | Pie chart saved for 'ReferralSource': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ReferralSource_pie_chart.png
+2026-06-18 12:32:35 | INFO     | categorical_analyzer | Bar chart saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Quantity_bar_chart.png
+2026-06-18 12:32:35 | INFO     | categorical_analyzer | Pie chart saved for 'Quantity': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Quantity_pie_chart.png
+2026-06-18 12:32:35 | INFO     | categorical_analyzer | Bar chart saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ItemsInCart_bar_chart.png
+2026-06-18 12:32:35 | INFO     | categorical_analyzer | Pie chart saved for 'ItemsInCart': E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ItemsInCart_pie_chart.png
+2026-06-18 12:32:35 | INFO     | categorical_analyzer | Categorical analysis complete for 11 columns
+2026-06-18 12:32:35 | INFO     | categorical_analyzer | Categorical summary saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\categorical_summary.csv
+2026-06-18 12:32:35 | INFO     | eda_pipeline    | [EDA] Step 'Categorical Analysis' completed - Categorical summary saved to reports/eda/categorical_summary.csv
+2026-06-18 12:32:35 | INFO     | eda_pipeline    | [EDA] Step 'Trend Analysis' started
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Identified 1 date columns: ['Date']
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Starting trend analysis...
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Daily trends calculated for 'Quantity': 671 days
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Daily trends calculated for 'UnitPrice': 671 days
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Daily trends calculated for 'ItemsInCart': 671 days
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Daily trends calculated for 'TotalPrice': 671 days
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Monthly trends calculated for 'Quantity': 30 months
+2026-06-18 12:32:35 | INFO     | trend_analyzer  | Monthly trends calculated for 'UnitPrice': 30 months
+2026-06-18 12:32:36 | INFO     | trend_analyzer  | Monthly trends calculated for 'ItemsInCart': 30 months
+2026-06-18 12:32:36 | INFO     | trend_analyzer  | Monthly trends calculated for 'TotalPrice': 30 months
+2026-06-18 12:32:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'Quantity': 52 weeks
+2026-06-18 12:32:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'UnitPrice': 52 weeks
+2026-06-18 12:32:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'ItemsInCart': 52 weeks
+2026-06-18 12:32:36 | INFO     | trend_analyzer  | Weekly trends calculated for 'TotalPrice': 52 weeks
+2026-06-18 12:32:36 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_Quantity_trend.png
+2026-06-18 12:32:37 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
+2026-06-18 12:32:37 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_UnitPrice_trend.png
+2026-06-18 12:32:38 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
+2026-06-18 12:32:39 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_ItemsInCart_trend.png
+2026-06-18 12:32:39 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
+2026-06-18 12:32:40 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_TotalPrice_trend.png
+2026-06-18 12:32:40 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
+2026-06-18 12:32:41 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_Quantity_trend.png
+2026-06-18 12:32:41 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_UnitPrice_trend.png
+2026-06-18 12:32:42 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_ItemsInCart_trend.png
+2026-06-18 12:32:43 | INFO     | trend_analyzer  | Trend chart saved: E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_TotalPrice_trend.png
+2026-06-18 12:32:43 | INFO     | trend_analyzer  | Trend analysis complete
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | [EDA] Step 'Trend Analysis' completed - Trend charts saved to visualizations/trends/
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | [EDA] Step 'Business Insights' started
+2026-06-18 12:32:43 | INFO     | business_insight_generator | Generating business insights...
+2026-06-18 12:32:43 | INFO     | business_insight_generator | Revenue insights generated
+2026-06-18 12:32:43 | INFO     | business_insight_generator | Customer insights generated
+2026-06-18 12:32:43 | INFO     | business_insight_generator | Order insights generated
+2026-06-18 12:32:43 | INFO     | business_insight_generator | Payment insights generated
+2026-06-18 12:32:43 | INFO     | business_insight_generator | Referral insights generated
+2026-06-18 12:32:43 | INFO     | business_insight_generator | All business insights generated
+2026-06-18 12:32:43 | INFO     | business_insight_generator | Business insights report saved to: E:\DecodeLabs_Internship\application\backend\reports\eda\business_insights.txt
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | [EDA] Step 'Business Insights' completed - Insights report saved to reports/eda/business_insights.txt
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | [EDA] Step 'Executive Summary' started
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | [EDA] Step 'Executive Summary' completed - Summary saved to reports/eda/executive_summary.txt
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | ================================================================================
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | E-COMMERCE EDA PIPELINE - EXECUTION COMPLETED
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | ================================================================================
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | End Time: 2026-06-18T12:32:43.214373
+2026-06-18 12:32:43 | INFO     | eda_pipeline    | Duration: 22.04 seconds
+2026-06-18 12:32:43 | INFO     | orchestrator    | Starting unified pipeline SQL analytics phase
+2026-06-18 12:32:43 | INFO     | analytics_pipeline | ================================================================================
+2026-06-18 12:32:43 | INFO     | analytics_pipeline | E-COMMERCE SQL ANALYTICS PIPELINE - EXECUTION STARTED
+2026-06-18 12:32:43 | INFO     | analytics_pipeline | ================================================================================
+2026-06-18 12:32:43 | INFO     | database_loader | Loading cleaned dataset into SQLite: E:\DecodeLabs_Internship\application\backend\data\processed\ecommerce_cleaned.csv
+2026-06-18 12:32:43 | INFO     | data_loader     | File validation passed: ecommerce_cleaned.csv
+2026-06-18 12:32:43 | INFO     | data_loader     | File size: 0.13 MB
+2026-06-18 12:32:43 | INFO     | data_loader     | Detected file type: csv (extension: .csv)
+2026-06-18 12:32:43 | INFO     | data_loader     | Loading CSV file: ecommerce_cleaned.csv
+2026-06-18 12:32:43 | INFO     | data_loader     | Successfully loaded 1200 rows from CSV
+2026-06-18 12:32:43 | INFO     | data_loader     | Data loading completed successfully. Shape: (1200, 14), Memory: 0.69 MB
+2026-06-18 12:32:43 | INFO     | database_loader | Loaded 1200 rows into E:\DecodeLabs_Internship\application\backend\data\processed\analytics.db.ecommerce_orders
+2026-06-18 12:32:43 | INFO     | analytics_pipeline | SQL analytics pipeline completed in 0.22 seconds
+2026-06-18 12:32:43 | INFO     | orchestrator    | Unified analytics pipeline completed successfully

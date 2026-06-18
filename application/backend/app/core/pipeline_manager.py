@@ -2,6 +2,7 @@ import logging
 from pathlib import Path
 from typing import Iterable, List
 
+from app.cleaning.config import config
 from app.core.execution_context import ExecutionContext
 
 
@@ -22,6 +23,8 @@ class PipelineManager:
             self.context.cleaned_data_file.parent,
             self.context.reports_dir,
             self.context.visualizations_dir,
+            config.SQL_DIR,
+            config.SQL_INSIGHTS_DIR,
         ):
             directory.mkdir(parents=True, exist_ok=True)
 

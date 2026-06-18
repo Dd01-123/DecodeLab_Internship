@@ -1,0 +1,195 @@
+================================================================================
+EXECUTIVE BUSINESS REPORT
+================================================================================
+Generated: 2026-06-18 12:32:43
+
+KPI SUMMARY
+--------------------------------------------------------------------------------
+Total Orders                        1200
+Total Revenue                       1264761.96
+Average Order Value                 1053.97
+Total Customers                     1189
+Average Quantity Per Order          2.95
+Average Items Per Order             5.49
+
+CUSTOMER INSIGHTS
+--------------------------------------------------------------------------------
+Top Customers By Revenue
+CustomerID  revenue  orders
+    C38840  5723.23       2
+    C57276  3456.40       1
+    C67260  3390.80       1
+    C13877  3384.90       1
+    C18404  3370.20       1
+
+Top Customers By Orders
+CustomerID  orders  revenue
+    C38840       2  5723.23
+    C97593       2  2855.22
+    C98474       2  2175.34
+    C70659       2  1853.96
+    C94569       2  1675.35
+
+Repeat Customers
+CustomerID  orders  revenue
+    C38840       2  5723.23
+    C97593       2  2855.22
+    C98474       2  2175.34
+    C70659       2  1853.96
+    C94569       2  1675.35
+
+
+PRODUCT INSIGHTS
+--------------------------------------------------------------------------------
+Best Selling Products
+Product  units_sold  orders
+  Chair         562     178
+Printer         542     181
+ Laptop         535     173
+   Desk         508     170
+ Tablet         497     179
+
+Lowest Selling Products
+Product  units_sold  orders
+  Phone         411     156
+Monitor         480     163
+ Tablet         497     179
+   Desk         508     170
+ Laptop         535     173
+
+Highest Revenue Products
+Product   revenue  units_sold
+  Chair 195620.11         562
+Printer 195612.61         542
+ Laptop 192126.56         535
+ Tablet 186568.95         497
+Monitor 175651.41         480
+
+
+REVENUE INSIGHTS
+--------------------------------------------------------------------------------
+Revenue By Product
+Product   revenue
+  Chair 195620.11
+Printer 195612.61
+ Laptop 192126.56
+ Tablet 186568.95
+Monitor 175651.41
+
+Revenue By Payment Method
+PaymentMethod   revenue
+  Credit Card 263847.63
+       Online 262442.94
+         Cash 259786.29
+    Gift Card 246323.92
+   Debit Card 232361.18
+
+Revenue By Referral Source
+ReferralSource   revenue
+     Instagram 275285.45
+         Email 261808.55
+        Google 250441.48
+      Facebook 250410.90
+      Referral 226815.58
+
+
+REFERRAL INSIGHTS
+--------------------------------------------------------------------------------
+Top Referral Sources
+ReferralSource  orders
+     Instagram     259
+         Email     250
+        Google     241
+      Facebook     228
+      Referral     222
+
+Lowest Referral Sources
+ReferralSource  orders
+      Referral     222
+      Facebook     228
+        Google     241
+         Email     250
+     Instagram     259
+
+Revenue By Referral Source
+ReferralSource   revenue
+     Instagram 275285.45
+         Email 261808.55
+        Google 250441.48
+      Facebook 250410.90
+      Referral 226815.58
+
+
+ORDER INSIGHTS
+--------------------------------------------------------------------------------
+Delivered Orders
+ delivered_orders  percentage
+              231       19.25
+
+Pending Orders
+ pending_orders  percentage
+            237       19.75
+
+Cancelled Orders
+ cancelled_orders  percentage
+              250       20.83
+
+
+PAYMENT INSIGHTS
+--------------------------------------------------------------------------------
+Most Used Payment Method
+PaymentMethod  orders
+       Online     258
+
+Least Used Payment Method
+PaymentMethod  orders
+    Gift Card     230
+
+Revenue By Payment Method
+PaymentMethod   revenue
+  Credit Card 263847.63
+       Online 262442.94
+         Cash 259786.29
+    Gift Card 246323.92
+   Debit Card 232361.18
+
+
+TREND INSIGHTS
+--------------------------------------------------------------------------------
+Daily Orders
+       day  orders
+2023-01-01       3
+2023-01-02       2
+2023-01-03       1
+2023-01-04       2
+2023-01-05       2
+
+Weekly Orders
+    week  orders
+2023-W00       3
+2023-W01      13
+2023-W02       9
+2023-W03       7
+2023-W04      13
+
+Monthly Orders
+  month  orders
+2023-01      47
+2023-02      37
+2023-03      43
+2023-04      31
+2023-05      49
+
+
+STRATEGIC RECOMMENDATIONS
+--------------------------------------------------------------------------------
+1. Prioritize inventory and campaigns for top revenue products such as Chair.
+2. Build retention offers around high-value customers such as C38840.
+3. Allocate more acquisition budget to the strongest referral source: Instagram.
+4. Keep checkout friction low for the preferred payment method: Online.
+5. Promote low-revenue products selectively, starting with Phone, after checking margin and stock position.
+6. Review pricing and bundling for high-volume, low-revenue products such as Desk.
+
+================================================================================
+END OF EXECUTIVE BUSINESS REPORT
+================================================================================

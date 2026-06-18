@@ -1,0 +1,40 @@
+================================================================================
+SQL REFERRAL INSIGHTS
+================================================================================
+Generated: 2026-06-18 12:32:43
+
+Top Referral Sources
+--------------------------------------------------------------------------------
+ReferralSource  orders
+     Instagram     259
+         Email     250
+        Google     241
+      Facebook     228
+      Referral     222
+
+Lowest Referral Sources
+--------------------------------------------------------------------------------
+ReferralSource  orders
+      Referral     222
+      Facebook     228
+        Google     241
+         Email     250
+     Instagram     259
+
+Revenue By Referral Source
+--------------------------------------------------------------------------------
+ReferralSource   revenue
+     Instagram 275285.45
+         Email 261808.55
+        Google 250441.48
+      Facebook 250410.90
+      Referral 226815.58
+
+Referral Performance
+--------------------------------------------------------------------------------
+ReferralSource  orders   revenue  average_order_value  order_share_pct
+     Instagram     259 275285.45              1062.88            21.58
+         Email     250 261808.55              1047.23            20.83
+        Google     241 250441.48              1039.18            20.08
+      Facebook     228 250410.90              1098.29            19.00
+      Referral     222 226815.58              1021.69            18.50

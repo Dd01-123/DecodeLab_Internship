@@ -16,7 +16,10 @@ class PipelineConfig:
     # FILE PATHS
     # ============================================================
     RAW_DATA_FILE: Path = DATA_RAW_DIR / "ecommerce_raw.xlsx"
-    CLEANED_DATA_FILE: Path = DATA_PROCESSED_DIR / "ecommerce_cleaned.xlsx"
+    CLEANED_DATA_FILE: Path = DATA_PROCESSED_DIR / "ecommerce_cleaned.csv"
+    ANALYTICS_DB_FILE: Path = DATA_PROCESSED_DIR / "analytics.db"
+    SQL_DIR: Path = BASE_DIR / "sql"
+    SQL_INSIGHTS_DIR: Path = REPORTS_DIR / "sql_insights"
     LOG_FILE: Path = LOGS_DIR / "data_cleaning.log"
     QUALITY_REPORT_FILE: Path = REPORTS_DIR / "data_quality_report.txt"
     CLEANING_SUMMARY_FILE: Path = REPORTS_DIR / "cleaning_summary.txt"
