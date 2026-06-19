@@ -1,0 +1,83 @@
+================================================================================
+VISUALIZATION SUMMARY
+================================================================================
+Generated: 2026-06-18 12:58:09
+
+Distributions
+--------------------------------------------------------------------------------
+Charts generated: 4
+- E:\DecodeLabs_Internship\application\backend\visualizations\distributions\Quantity_distribution.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\distributions\UnitPrice_distribution.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\distributions\ItemsInCart_distribution.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\distributions\TotalPrice_distribution.png
+
+Outliers
+--------------------------------------------------------------------------------
+Charts generated: 4
+- E:\DecodeLabs_Internship\application\backend\visualizations\outliers\Quantity_outliers.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\outliers\UnitPrice_outliers.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\outliers\ItemsInCart_outliers.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\outliers\TotalPrice_outliers.png
+
+Correlations
+--------------------------------------------------------------------------------
+Charts generated: 2
+- E:\DecodeLabs_Internship\application\backend\visualizations\correlations\pearson_correlation_heatmap.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\correlations\spearman_correlation_heatmap.png
+
+Categorical
+--------------------------------------------------------------------------------
+Charts generated: 18
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderID_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CustomerID_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Product_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Product_pie_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ShippingAddress_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\PaymentMethod_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\PaymentMethod_pie_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderStatus_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\OrderStatus_pie_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\TrackingNumber_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CouponCode_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\CouponCode_pie_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ReferralSource_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ReferralSource_pie_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Quantity_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\Quantity_pie_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ItemsInCart_bar_chart.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\categorical\ItemsInCart_pie_chart.png
+
+Trends
+--------------------------------------------------------------------------------
+Charts generated: 9
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_Quantity_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_UnitPrice_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_ItemsInCart_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_TotalPrice_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_Quantity_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_UnitPrice_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_ItemsInCart_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\monthly_TotalPrice_trend.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
+
+Revenue
+--------------------------------------------------------------------------------
+Charts generated: 7
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_Product.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_share_by_Product.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_PaymentMethod.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_share_by_PaymentMethod.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_OrderStatus.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_ReferralSource.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_share_by_ReferralSource.png
+
+Customers
+--------------------------------------------------------------------------------
+Charts generated: 2
+- E:\DecodeLabs_Internship\application\backend\visualizations\customers\top_customers_by_orders.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\customers\top_customers_by_revenue.png
+
+Dashboards
+--------------------------------------------------------------------------------
+Charts generated: 1
+- E:\DecodeLabs_Internship\application\backend\visualizations\dashboards\executive_dashboard.png

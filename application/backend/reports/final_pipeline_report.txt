@@ -1,10 +1,10 @@
 ================================================================================
 FINAL ANALYTICS PIPELINE REPORT
 ================================================================================
-Generated: 2026-06-18 12:32:43
-Pipeline Start Time: 2026-06-18T12:32:19.528433
-Pipeline End Time: 2026-06-18T12:32:43.442403
-Execution Duration: 23.91 seconds
+Generated: 2026-06-18 12:58:09
+Pipeline Start Time: 2026-06-18T12:57:21.154651
+Pipeline End Time: 2026-06-18T12:58:09.948769
+Execution Duration: 48.79 seconds
 
 CURRENT ARCHITECTURE
 --------------------------------------------------------------------------------
@@ -17,8 +17,9 @@ PHASE EXECUTION MODEL
 --------------------------------------------------------------------------------
 1. Phase 1 cleans, validates, reports, and writes the canonical CSV dataset.
 2. Phase 2 runs EDA and generates profiling, visual, and business reports.
-3. Phase 3 loads the cleaned CSV into SQLite and runs reusable SQL analysis.
-4. The final report consolidates cleaning, EDA, SQL, and recommendations.
+3. Phase 3 converts EDA findings into visualizations and storytelling reports.
+4. Phase 4 loads the cleaned CSV into SQLite and runs reusable SQL analysis.
+5. The final report consolidates cleaning, EDA, visualization, SQL, and recommendations.
 
 RECOMMENDATIONS
 --------------------------------------------------------------------------------
@@ -42,7 +43,16 @@ EDA SUMMARY
 Status: SUCCESS
 Rows Analyzed: 1,200
 Columns Analyzed: 14
-EDA Duration: 22.04 seconds
+EDA Duration: 18.14 seconds
+
+VISUALIZATION STORYTELLING SUMMARY
+--------------------------------------------------------------------------------
+Status: SUCCESS
+Charts Generated: 47
+Chart Categories: {'distributions': 4, 'outliers': 4, 'correlations': 2, 'categorical': 18, 'trends': 9, 'revenue': 7, 'customers': 2, 'dashboards': 1}
+Dashboard: E:\DecodeLabs_Internship\application\backend\visualizations\dashboards\executive_dashboard.png
+Visualization Duration: 29.55 seconds
+Visualization Reports: ['E:\\DecodeLabs_Internship\\application\\backend\\reports\\visualization\\visualization_summary.txt', 'E:\\DecodeLabs_Internship\\application\\backend\\reports\\visualization\\storytelling_report.txt', 'E:\\DecodeLabs_Internship\\application\\backend\\reports\\visualization\\executive_visual_summary.txt']
 
 SQL ANALYTICS SUMMARY
 --------------------------------------------------------------------------------
@@ -98,6 +108,9 @@ GENERATED REPORTS
 - E:\DecodeLabs_Internship\application\backend\reports\sql_insights\referral_insights.txt
 - E:\DecodeLabs_Internship\application\backend\reports\sql_insights\revenue_insights.txt
 - E:\DecodeLabs_Internship\application\backend\reports\sql_insights\trend_insights.txt
+- E:\DecodeLabs_Internship\application\backend\reports\visualization\executive_visual_summary.txt
+- E:\DecodeLabs_Internship\application\backend\reports\visualization\storytelling_report.txt
+- E:\DecodeLabs_Internship\application\backend\reports\visualization\visualization_summary.txt
 
 GENERATED VISUALIZATIONS
 --------------------------------------------------------------------------------
@@ -121,6 +134,9 @@ GENERATED VISUALIZATIONS
 - E:\DecodeLabs_Internship\application\backend\visualizations\categorical\TrackingNumber_bar_chart.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\correlations\pearson_correlation_heatmap.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\correlations\spearman_correlation_heatmap.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\customers\top_customers_by_orders.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\customers\top_customers_by_revenue.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\dashboards\executive_dashboard.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\distributions\ItemsInCart_distribution.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\distributions\Quantity_distribution.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\distributions\TotalPrice_distribution.png
@@ -129,6 +145,13 @@ GENERATED VISUALIZATIONS
 - E:\DecodeLabs_Internship\application\backend\visualizations\outliers\Quantity_outliers.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\outliers\TotalPrice_outliers.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\outliers\UnitPrice_outliers.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_OrderStatus.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_PaymentMethod.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_Product.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_by_ReferralSource.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_share_by_PaymentMethod.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_share_by_Product.png
+- E:\DecodeLabs_Internship\application\backend\visualizations\revenue\revenue_share_by_ReferralSource.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_count_trend.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_ItemsInCart_trend.png
 - E:\DecodeLabs_Internship\application\backend\visualizations\trends\daily_Quantity_trend.png

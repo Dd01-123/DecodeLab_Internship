@@ -25,6 +25,10 @@ class PipelineManager:
             self.context.visualizations_dir,
             config.SQL_DIR,
             config.SQL_INSIGHTS_DIR,
+            config.VISUALIZATION_REPORTS_DIR,
+            self.context.visualizations_dir / "revenue",
+            self.context.visualizations_dir / "customers",
+            self.context.visualizations_dir / "dashboards",
         ):
             directory.mkdir(parents=True, exist_ok=True)
 

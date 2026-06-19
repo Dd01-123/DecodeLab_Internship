@@ -4,7 +4,8 @@ This backend runs an end-to-end analytics workflow for e-commerce order data:
 
 1. Phase 1: Data Cleaning and Data Preparation
 2. Phase 2: Exploratory Data Analysis and Visualizations
-3. Phase 3: SQL Analytics and Executive Business Reporting
+3. Phase 3: Data Visualization and Storytelling
+4. Phase 4: SQL Analytics and Executive Business Reporting
 
 The single entry point is:
 
@@ -20,6 +21,7 @@ application/backend/
 |   |-- cleaning/          # Data loading, cleaning, validation, quality reporting
 |   |-- core/              # Unified orchestration and execution context
 |   |-- eda/               # Profiling, statistics, visualizations, EDA insights
+|   |-- visualization/     # Business visuals, dashboard, storytelling reports
 |   `-- sql_analytics/     # SQLite loading, SQL execution, SQL reports
 |-- data/
 |   |-- raw/
@@ -40,12 +42,31 @@ Running `python -m app.main` executes:
 2. Clean and validate records
 3. Save cleaned dataset to `data/processed/ecommerce_cleaned.csv`
 4. Run EDA and generate visualizations
-5. Load cleaned data into SQLite at `data/processed/analytics.db`
-6. Create the `ecommerce_orders` table
-7. Run SQL analytics from the reusable query files in `sql/`
-8. Generate SQL insight reports
-9. Generate `reports/sql_insights/executive_business_report.txt`
-10. Generate `reports/final_pipeline_report.txt`
+5. Run the visualization storytelling framework
+6. Generate revenue, customer, trend, categorical, distribution, correlation, and outlier charts
+7. Generate `visualizations/dashboards/executive_dashboard.png`
+8. Generate visualization narrative reports
+9. Load cleaned data into SQLite at `data/processed/analytics.db`
+10. Create the `ecommerce_orders` table
+11. Run SQL analytics from the reusable query files in `sql/`
+12. Generate SQL insight reports
+13. Generate `reports/sql_insights/executive_business_report.txt`
+14. Generate `reports/final_pipeline_report.txt`
+
+## Visualization Storytelling Coverage
+
+The visualization phase generates:
+
+- Distribution charts
+- Outlier charts
+- Correlation heatmaps
+- Categorical charts
+- Revenue charts
+- Customer charts
+- Trend charts
+- Executive dashboard image
+- Storytelling report
+- Executive visual summary
 
 ## SQL Analytics Coverage
 
@@ -85,6 +106,10 @@ Key generated outputs include:
 - `reports/data_quality_report.txt`
 - `reports/cleaning_summary.txt`
 - `reports/eda/*`
+- `reports/visualization/visualization_summary.txt`
+- `reports/visualization/storytelling_report.txt`
+- `reports/visualization/executive_visual_summary.txt`
+- `visualizations/dashboards/executive_dashboard.png`
 - `reports/sql_insights/kpi_report.txt`
 - `reports/sql_insights/customer_insights.txt`
 - `reports/sql_insights/product_insights.txt`

@@ -1,0 +1,11 @@
+================================================================================
+DATA STORYTELLING REPORT
+================================================================================
+Generated: 2026-06-18 12:58:09
+
+- Chair is the primary product revenue driver, contributing 15.47% of total revenue.
+- Instagram is the strongest visualized acquisition channel by revenue.
+- Cancelled is the most common order status, while delivered orders represent 19.25% of activity.
+- Cancelled orders account for 20.83% of orders, making cancellation monitoring a priority.
+- Customer C38840 is the highest-value customer, contributing 0.45% of total revenue.
+- 2024-06 is the strongest month in the revenue trend visualization.

@@ -1,3 +1,9 @@
 .env
 venv
 application/backend/src
+application/backend/visualizations
+application/frontend/
+notebook
+logs
+data/processed
+data/raw

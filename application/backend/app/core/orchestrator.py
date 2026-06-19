@@ -9,6 +9,7 @@ from app.core.execution_context import ExecutionContext
 from app.core.pipeline_manager import PipelineManager
 from app.eda.eda_pipeline import EDAPipeline
 from app.sql_analytics.analytics_pipeline import SQLAnalyticsPipeline
+from app.visualization.visualization_pipeline import VisualizationPipeline
 
 
 logger = logging.getLogger(__name__)
@@ -31,6 +32,7 @@ class AnalyticsPipeline:
         self.manager = PipelineManager(self.context)
         self.cleaning_pipeline: Optional[DataCleaningPipeline] = None
         self.eda_pipeline: Optional[EDAPipeline] = None
+        self.visualization_pipeline: Optional[VisualizationPipeline] = None
         self.sql_analytics_pipeline: Optional[SQLAnalyticsPipeline] = None
 
     def run_cleaning_phase(self) -> Dict[str, Any]:
@@ -68,6 +70,14 @@ class AnalyticsPipeline:
         )
         return self.context.sql_analytics_results
 
+    def run_visualization_storytelling_phase(self) -> Dict[str, Any]:
+        logger.info("Starting unified pipeline visualization and storytelling phase")
+        self.visualization_pipeline = VisualizationPipeline(
+            data_file_path=self.context.cleaned_data_file,
+        )
+        self.context.visualization_results = self.visualization_pipeline.run()
+        return self.context.visualization_results
+
     def run_reporting_phase(self) -> Path:
         self.manager.refresh_generated_outputs()
         return self.generate_final_pipeline_report()
@@ -85,6 +95,7 @@ class AnalyticsPipeline:
         try:
             self.run_cleaning_phase()
             self.run_eda_phase()
+            self.run_visualization_storytelling_phase()
             self.run_sql_analytics_phase()
             self.context.finish()
             self.run_visualization_phase()
@@ -100,6 +111,7 @@ class AnalyticsPipeline:
         report_path = self.context.reports_dir / "final_pipeline_report.txt"
         cleaning = self.context.cleaning_results
         eda = self.context.eda_results
+        visualization = self.context.visualization_results
         sql_analytics = self.context.sql_analytics_results
 
         lines = [
@@ -122,8 +134,9 @@ class AnalyticsPipeline:
             "-" * 80,
             "1. Phase 1 cleans, validates, reports, and writes the canonical CSV dataset.",
             "2. Phase 2 runs EDA and generates profiling, visual, and business reports.",
-            "3. Phase 3 loads the cleaned CSV into SQLite and runs reusable SQL analysis.",
-            "4. The final report consolidates cleaning, EDA, SQL, and recommendations.",
+            "3. Phase 3 converts EDA findings into visualizations and storytelling reports.",
+            "4. Phase 4 loads the cleaned CSV into SQLite and runs reusable SQL analysis.",
+            "5. The final report consolidates cleaning, EDA, visualization, SQL, and recommendations.",
             "",
             "RECOMMENDATIONS",
             "-" * 80,
@@ -148,6 +161,15 @@ class AnalyticsPipeline:
             f"Rows Analyzed: {eda.get('rows_analyzed', 0):,}",
             f"Columns Analyzed: {eda.get('columns_analyzed', 0):,}",
             f"EDA Duration: {eda.get('duration_seconds', 0):.2f} seconds",
+            "",
+            "VISUALIZATION STORYTELLING SUMMARY",
+            "-" * 80,
+            f"Status: {visualization.get('status', 'N/A')}",
+            f"Charts Generated: {visualization.get('charts_generated', 0):,}",
+            f"Chart Categories: {visualization.get('chart_categories', {})}",
+            f"Dashboard: {visualization.get('dashboard', config.BASE_DIR / 'visualizations' / 'dashboards' / 'executive_dashboard.png')}",
+            f"Visualization Duration: {visualization.get('duration_seconds', 0):.2f} seconds",
+            f"Visualization Reports: {visualization.get('reports_generated', [])}",
             "",
             "SQL ANALYTICS SUMMARY",
             "-" * 80,

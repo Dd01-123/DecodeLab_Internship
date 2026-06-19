@@ -20,6 +20,7 @@ class PipelineConfig:
     ANALYTICS_DB_FILE: Path = DATA_PROCESSED_DIR / "analytics.db"
     SQL_DIR: Path = BASE_DIR / "sql"
     SQL_INSIGHTS_DIR: Path = REPORTS_DIR / "sql_insights"
+    VISUALIZATION_REPORTS_DIR: Path = REPORTS_DIR / "visualization"
     LOG_FILE: Path = LOGS_DIR / "data_cleaning.log"
     QUALITY_REPORT_FILE: Path = REPORTS_DIR / "data_quality_report.txt"
     CLEANING_SUMMARY_FILE: Path = REPORTS_DIR / "cleaning_summary.txt"
